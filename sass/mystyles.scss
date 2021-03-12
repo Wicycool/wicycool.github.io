@@ -1,0 +1,13 @@
+@charset "utf-8";
+$awesomeblue: dodgerblue;
+$awesomeblue-darker: rgb(87, 171, 255);
+$primary: $awesomeblue;
+$body-background-color: black;
+$text: white;
+$text-light: white;
+$text-strong: white;
+$link: $awesomeblue;
+$link-hover: $awesomeblue-darker;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+$family-sans-serif: "Montserrat Black";
+@import "../node_modules/bulma/bulma.sass";
