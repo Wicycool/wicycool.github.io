@@ -288,7 +288,7 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: "Montserrat Black"; }
+  font-family: "Montserrat"; }
 
 code,
 pre {
@@ -6942,13 +6942,13 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   font-weight: 700 !important; }
 
 .is-family-primary {
-  font-family: "Montserrat Black" !important; }
+  font-family: "Montserrat" !important; }
 
 .is-family-secondary {
-  font-family: "Montserrat Black" !important; }
+  font-family: "Montserrat" !important; }
 
 .is-family-sans-serif {
-  font-family: "Montserrat Black" !important; }
+  font-family: "Montserrat" !important; }
 
 .is-family-monospace {
   font-family: monospace !important; }

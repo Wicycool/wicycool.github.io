@@ -15,9 +15,8 @@
             <div class="container is-widescreen has-text-left">
                 <p class="title is-5"><a class="" href="../">← Back to homepage</a></p>
                 <h1 class="title is-2">Projects </h1>
+                <noscript>It looks like JavaScript is disabled or not supported on your browser... To see projects, please enable JS! :)</noscript>
                 <div class="columns" id="projects">
-                    <div class="column">
-                    </div>
                     <div class="column">
                     </div>
                     <div class="column">
@@ -34,11 +33,106 @@
         axios.get("../assets/json/projects.json")
         .then(function(response){
             console.log(response.data);
-            currentCard = document.createElement("div");
-            currentCard.classList.add("card");
-            currentCard.innerText = "test";
+            console.log(response.data.length);
+            for (var i = 0; i < response.data.length; i++){
+                
+                var currentCardLink = document.createElement("a");
+                currentCardLink.href = response.data[i]["link"]
+                
+                var currentCard = document.createElement("div");
+                currentCard.classList.add("card","mb-5");
+                
+                var currentCardContent = document.createElement("div");
+                currentCardContent.classList.add("card-content");
+
+                var currentCardContentDescription = document.createElement("p");
+                currentCardContentDescription.classList.add("is-size-7");
+                currentCardContentDescription.innerText = response.data[i]["description"];
+                
+                var currentCardMedia = document.createElement("div");
+                currentCardMedia.classList.add("media");
+
+                var currentCardMediaLeft = document.createElement("div");
+                currentCardMediaLeft.classList.add("media-left");
+
+                var currentCardMediaLeftImage = document.createElement("figure");
+                currentCardMediaLeftImage.classList.add("image","is-24x24");
+
+                var currentCardMediaContent = document.createElement("div");
+                currentCardMediaContent.classList.add("media-content");
+
+                var currentCardMediaContentTitle = document.createElement("p");
+                currentCardMediaContentTitle.classList.add("title","is-4");
+                currentCardMediaContentTitle.innerText = response.data[i]["name"];
+                
+                var currentCardMediaContentSubtitle = document.createElement("p");
+                currentCardMediaContentSubtitle.classList.add("subtitle", "is-6");
+                
+                currentCardMediaLeftImage.style.backgroundSize = "contain";
+
+                switch(response.data[i]["type"]){
+                    case "scratch":
+                        currentCardMediaContentSubtitle.innerText = "Scratch";
+                        currentCardMediaLeftImage.style.backgroundImage = `url("https://scratch.mit.edu/favicon.ico")`;
+                    break;
+                    case "video":
+                        currentCardMediaContentSubtitle.innerText = "Video";
+                        currentCardMediaLeftImage.style.backgroundImage = `url("https://www.youtube.com/s/desktop/4fc9328c/img/favicon_144.png")`;
+                    break;
+                    case "scratchaddons":
+                        currentCardMediaContentSubtitle.innerText = "Addon for ScratchAddons";
+                        currentCardMediaLeftImage.style.backgroundImage = `url("https://scratchaddons.com/assets/images/icon.svg")`;
+                    break;
+                    case "video-series":
+                        currentCardMediaContentSubtitle.innerText = "Video Series";
+                        currentCardMediaLeftImage.style.backgroundImage = `url("https://www.youtube.com/s/desktop/4fc9328c/img/favicon_144.png")`;
+                    break;
+                    case "artwork":
+                        currentCardMediaContentSubtitle.innerText = "Artwork";
+                        currentCardMediaLeftImage.style.backgroundImage = `url("../assets/images/brush-white-24dp.svg")`;
+                    break;
+                    default:
+                        currentCardMediaContentSubtitle.innerText = "";
+                        currentCardMediaLeftImage.style.backgroundImage = `url("../assets/images/help_outline-white-24dp.svg")`;
+                    break;
+                }
+
+                var currentCardImageContainer = document.createElement("div");
+                currentCardImageContainer.classList.add("card-image");
+
+                var currentCardImageFigure = document.createElement("figure");
+                currentCardImageFigure.classList.add("image",`is-${response.data[i]["thumbnail-aspect"]}`);
+                
+                
+                var currentCardImage = document.createElement("img");
+                currentCardImage.classList.add();
+                currentCardImage.style.background = `center / cover no-repeat url(${response.data[i]["thumbnail"]})`;
+                currentCardImage.src = "../assets/images/empty.png";
+
+
+                currentCardImageFigure.appendChild(currentCardImage);
+                currentCardImageContainer.appendChild(currentCardImageFigure);
+                currentCard.appendChild(currentCardImageContainer);
+                
+                
+                currentCardMediaContent.appendChild(currentCardMediaContentTitle);
+                currentCardMediaContent.appendChild(currentCardMediaContentSubtitle);
+                currentCardMediaContent.insertAdjacentElement("beforeend", currentCardContentDescription);
+                currentCardMediaLeft.appendChild(currentCardMediaLeftImage);
+                currentCardMedia.appendChild(currentCardMediaLeft);
+                currentCardMedia.appendChild(currentCardMediaContent);
+                currentCardContent.appendChild(currentCardMedia);
+
+                currentCard.appendChild(currentCardContent);
+                currentCardLink.appendChild(currentCard);
+
+                console.log(i % 4 + 1);
+                
+                document.querySelector(`#projects .column:nth-child(${i % 3 + 1})`).insertAdjacentElement("beforeend",currentCardLink);
+            }
             
-            projects.appendChild(currentCard);
+        }).catch(function(error){
+            document.querySelector(`#projects`).innerText = "Failed getting projects... let Wicycool know or try again later! :)";
         });
     </script>
 </body>

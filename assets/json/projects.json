@@ -1,37 +1,66 @@
-{
-    "example":{
-        "name": "",
-        "type": "",
-        "description": "",
-        "link": "",
-        "thumbnail": ""
-    },
-    "ezos": {
+[
+    {
         "name": "EzOS",
         "type": "scratch",
-        "description": "An operating system created in Scratch",
+        "description": "An operating system created in Scratch.",
         "link": "https://scratch.mit.edu/projects/151253089/",
-        "thumbnail": "https://cdn2.scratch.mit.edu/get_image/project/151253089_480x360.png"
+        "thumbnail": "https://cdn2.scratch.mit.edu/get_image/project/151253089_480x360.png",
+        "thumbnail-aspect": "4by3"
     },
-    "goime": {
+    {
         "name": "Getting Over It: Multiplayer Edition",
         "type": "scratch",
-        "description": "A multiplayer version of Griffpatch's Scratch recreation of Getting Over It",
+        "description": "A multiplayer version of Griffpatch's Scratch recreation of Getting Over It.",
         "link": "https://scratch.mit.edu/projects/396122003/",
-        "thumbnail": "https://cdn2.scratch.mit.edu/get_image/project/396122003_480x360.png"
+        "thumbnail": "https://cdn2.scratch.mit.edu/get_image/project/396122003_480x360.png",
+        "thumbnail-aspect": "4by3"
     },
-    "button-press":{
+    {
         "name": "This Button Has Been Pressed ????? Times",
         "type": "scratch",
         "description": "How many times has this button been pressed? I don't know!",
         "link": "https://scratch.mit.edu/projects/419580029/",
-        "thumbnail": "https://cdn2.scratch.mit.edu/get_image/project/419580029_480x360.png"
+        "thumbnail": "https://cdn2.scratch.mit.edu/get_image/project/419580029_480x360.png",
+        "thumbnail-aspect": "4by3"
     },
-    "bees-video":{
+    {
+        "name": "Profile Page Banner",
+        "type": "scratchaddons",
+        "description": "An addon for the ScratchAddons extension that adds a nice-looking banner to any user's profile.",
+        "link": "https://scratchaddons.com/",
+        "thumbnail": "https://user-images.githubusercontent.com/38388911/100688726-01c53100-3351-11eb-934a-b0cf7a10cbeb.png",
+        "thumbnail-aspect": "4by3"
+    },
+    {
+        "name": "Memes",
+        "type": "video-series",
+        "description": "All of the memes that I have posted on YouTube.",
+        "link": "https://www.youtube.com/playlist?list=PLQ7FZ3d0mAl5NW1-am3BwbpfgQqz6V2jq",
+        "thumbnail": "https://i.ytimg.com/vi/1BvsQR417CM/maxresdefault.jpg",
+        "thumbnail-aspect": "16by9"
+    },
+    {
         "name": "Why Bees Are the Cutest Mobs in Minecraft",
         "type": "video",
         "description": "A video about the very cute mob in Minecraft: Bees!!",
         "link": "https://www.youtube.com/watch?v=6C0W6K5nv1M",
-        "thumbnail": "https://i.ytimg.com/vi/6C0W6K5nv1M/maxresdefault.jpg"
+        "thumbnail": "https://i.ytimg.com/vi/6C0W6K5nv1M/maxresdefault.jpg",
+        "thumbnail-aspect": "16by9"
+    },
+    {
+        "name": "Livestreams",
+        "type": "video-series",
+        "description": "All of the livestreams I have done.",
+        "link": "https://www.youtube.com/playlist?list=PLQ7FZ3d0mAl7TSChtAbEqPjQ8UzAYb4Ks",
+        "thumbnail": "../assets/images/ezstream.jpg",
+        "thumbnail-aspect": "16by9"
+    },
+    {
+        "name": "Kevintendo 2020 Branding",
+        "type": "artwork",
+        "description": "Logos and channel artwork that I created for Kevintendo for his 2020 rebranding.",
+        "link": "https://drive.google.com/drive/u/0/folders/1SVj5UWJxDDHy42JKQ_eCZ6QhLabyNZ32",
+        "thumbnail": "../assets/images/k10-2020-branding.png",
+        "thumbnail-aspect": "4by3"
     }
-}
+]
