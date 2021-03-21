@@ -1,0 +1,89 @@
+
+@keyframes bumplink {
+    from {left: -20px}
+    to {left: 0px}
+}
+@keyframes bumplinkback {
+    from {left: 20px}
+    to {left: 0px}
+}
+@keyframes fadeout{
+    from {
+        opacity: 1;
+
+    }
+    to {
+        opacity: 0;
+    }
+}
+@keyframes slideleft{
+    from{
+        right: 0;
+    }
+    to{
+        right: 200px;
+    }
+}
+@keyframes fadein{
+    to {
+        opacity: 1;
+
+    }
+    from {
+        opacity: 0;
+    }
+}
+@keyframes slideright{
+    from{
+        right: 200px;
+    }
+    to{
+        right: 0;
+    }
+}
+@keyframes slideup{
+    0%{
+        top: 0%;
+        display: flex !important;
+    }
+    50%{
+        top: -100%;
+        display: flex !important;
+    }
+}
+@keyframes zoomin{
+    0%{
+        transform: scale(0.9);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+hr{
+    width: 300px;
+    height: 1px;
+    background-color: rgba(255,255,255,0.25)
+}
+.link{
+    position: relative;
+    animation-name: bumplinkback;
+    animation-duration: 0.05s;
+}
+.link:hover{
+    animation-name: bumplink;
+    animation-duration: 0.1s;
+}
+.link:hover::before{
+    content: "➔ ";
+    color: dodgerblue;
+}
+#main{
+    position:relative;
+    animation-duration: 0.25s;
+}
+#main-wrapper{
+    animation-duration: 0.25s;
+}
+#windowblind{
+    animation-duration: 0.5s;
+}

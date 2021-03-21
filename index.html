@@ -7,21 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=0.85">
     <title>Wicycool</title>
     <link rel="stylesheet" href="assets/css/mystyles.css">
-    <style>
-        hr{
-            width: 300px;
-            height: 1px;
-            background-color: rgba(255,255,255,0.25)
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/home.css">
 </head>
 
 <body>
-    <section class="hero is-fullheight">
-        <div class="hero-body" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/images/pixel\ background.jpg') center; background-size: cover; background-attachment: fixed;">
-            <div class="container is-widescreen has-text-left">
-                <section class="hero" style="max-width: 1024px;">
-                    <div class="hero-body is-rounded" style="border-radius: 1em; background: url('assets/images/pixel\ background.jpg') center; background-size: cover; background-attachment: fixed;">
+    <section class="hero is-fullheight" style="z-index: -10;">
+        <div id="main-wrapper" class="hero-body" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/images/pixel\ background.jpg') center; background-size: cover; background-attachment: fixed;">
+            
+            <div id="main" class="container is-widescreen has-text-left" style="max-width: 1280px;">
+                <section class="hero" style="max-width: 768px;">
+                    <div class="hero-body" style="border-radius: 1em; background: url('assets/images/pixel\ background.jpg') center; background-size: cover; background-attachment: fixed;">
                         <!--<img src="images/circle logo.png" style="height: 150px; margin-right: 20px; vertical-align: middle; margin-top: 20px; margin-bottom: 20px;">-->
                         <img src="assets/images/full logo white.png" style="max-width: 300px; vertical-align: middle;">
                     </div>
@@ -30,29 +25,83 @@
                 <div class="block title is-5">
                     I make stuff sometimes.
                 </div>
-                <article class="message is-info" style="max-width: 480px;">
-                    <div class="message-header">
-                        <p>Ezlambry is now Wicycool</p>
-                    </div>
-                    <div class="message-body">
-                        See more information here.
-                    </div>
-                </article>
                 <hr>
                 <div class="has-text-white">
                     <div class="block">
-                        <p class="title is-3"><a href="about/" class="has-text-white">About</a></p>
-                        <p class="title is-3"><a href="stuff/" class="has-text-white">Projects</a></p>
-                        <p class="title is-3"><a href="stuff/" class="has-text-white">Social Media</a></p>
+                        <p class="title is-3"><a href="about/" class="has-text-white link">About</a></p>
+                        <p class="title is-3"><a href="stuff/" class="has-text-white link">Projects</a></p>
+                        <p class="title is-3"><a href="stuff/" class="has-text-white link">Social Media</a></p>
                     </div>
                     <div class="block">
                         <p class="title is-4">Discord</p>
-                        <p class="title is-4"><a href="branding/" class="has-text-white">Branding</a></p>
+                        <p class="title is-4"><a href="branding/" class="has-text-white link">Branding</a></p>
                     </div>
                     <hr>
-                    <p class="subtitle is-6"><a href="privacy/" class="has-text-white">Privacy Policy</a></p>
+                    <p class="subtitle is-6"><a href="privacy/" class="has-text-white link">Privacy Policy</a></p>
                 </div>
             </div>
         </div>
     </section>
+    <section id="windowblind" class="hero is-fullheight" style="top: 0%; left: 0; right: 0; position: fixed; display: none;">
+        <div class="hero-body has-text-centered" style="text-align: center !important; background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('assets/images/pixel\ background.jpg') center; background-size: cover;">
+            <div class="container is-widescreen has-text-centered" style="max-width: 1280px;">
+                <div class="section">
+                    <img src="assets/images/circle logo.png" style="max-width: 400px;">
+                </div>
+                <div class="section">
+                    <button class="button large is-primary is-large">Open website</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        var transitionLeft = new Audio('assets/sound/wav/04/navigation_transition-left.wav');
+        var transitionRight = new Audio('assets/sound/wav/04/navigation_transition-right.wav');
+        var forwardSelection = new Audio('assets/sound/wav/03/navigation_forward-selection.wav');
+        var backwardSelection = new Audio('assets/sound/wav/03/navigation_backward-selection.wav');
+        var openSite = new Audio('assets/sound/wav/03/navigation_selection-complete-celebration.wav');
+        var hoverSound = new Audio('assets/sound/wav/03/navigation_hover-tap.wav');
+        if (document.referrer.split('/')[2] != location.host) {
+            //came from different non-wicycool website
+            document.querySelector("#main-wrapper").style.opacity = "0";
+            document.querySelector("#windowblind").style.display= "flex";
+            document.querySelector("#windowblind").addEventListener('click', function () {
+                document.querySelector("#windowblind").style.animationName = "slideup";
+                document.querySelector("#main-wrapper").style.opacity = "1";
+                document.querySelector("#main-wrapper").style.animationName = "fadein";
+                document.querySelector("#main").style.animationName = "zoomin";
+                setTimeout(function () {
+                    document.querySelector("#windowblind").style.display = "none";
+                }, 250);
+                transitionRight.play();
+                openSite.play();
+            });
+        } else {
+            //came from wicycool website
+            document.querySelector("#main-wrapper").style.animationName = "fadein";
+            document.querySelector("#main").style.animationName = "slideright";
+        }
+        var links = document.getElementsByClassName("link");
+        console.log(links.length);
+        for (var i = 0; i < links.length; i++) {
+            console.log("test");
+            console.log(links[i])
+            links[i].addEventListener('mouseover', function () {
+                hoverSound.currentTime = 0;
+                hoverSound.play();
+            });
+            let thisLink = links[i].href
+            links[i].addEventListener('click', function () {
+                console.log("test")
+                document.querySelector("#main").style.animationName = "slideleft";
+                document.querySelector("#main-wrapper").style.animationName = "fadeout";
+                document.querySelector("#main-wrapper").style.opacity = "0";
+                forwardSelection.play();
+                setTimeout(function () {
+                    window.location = thisLink
+                }, 250);
+            });
+            links[i].removeAttribute("href");
+        }
+    </script>
 </html>
