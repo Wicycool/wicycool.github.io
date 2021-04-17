@@ -12,11 +12,11 @@
 
 <body>
     <section class="hero is-fullheight" style="z-index: -10;">
-        <div id="main-wrapper" class="hero-body" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/images/pixel\ background.jpg') center; background-size: cover; background-attachment: fixed;">
+        <div id="main-wrapper" class="hero-body" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('assets/images/pixel\ background.jpg') center; background-size: cover; background-attachment: fixed;">
             
             <div id="main" class="container is-widescreen has-text-left" style="max-width: 1280px;">
                 <section class="hero" style="max-width: 768px;">
-                    <div class="hero-body" style="border-radius: 1em; background: url('assets/images/pixel\ background.jpg') center; background-size: cover; background-attachment: fixed;">
+                    <div class="hero-body" style="border-radius: 1em; background: url('assets/images/pixel\ background.jpg') center; background-size: cover; background-attachment: fixed; box-shadow: 0 5px 10px 0px rgba(0, 0, 0, .2);">
                         <!--<img src="images/circle logo.png" style="height: 150px; margin-right: 20px; vertical-align: middle; margin-top: 20px; margin-bottom: 20px;">-->
                         <img src="assets/images/full logo white.png" style="max-width: 300px; vertical-align: middle;">
                     </div>
@@ -43,14 +43,14 @@
         </div>
     </section>
     <section id="windowblind" class="hero is-fullheight" style="top: 0%; left: 0; right: 0; position: fixed; display: none;">
-        <div class="hero-body has-text-centered" style="text-align: center !important; background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('assets/images/pixel\ background.jpg') center; background-size: cover;">
-            <div class="container is-widescreen has-text-centered" style="max-width: 1280px;">
-                <div class="section">
-                    <img src="assets/images/circle logo.png" style="max-width: 400px;">
-                </div>
-                <div class="section">
-                    <button class="button large is-primary is-large">Open website</button>
-                </div>
+        <div class="hero-body" style="text-align: center !important; background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('assets/images/pixel\ background.jpg') center; background-size: cover;">
+            <div class="container is-widescreen" style="max-width: 1280px;">
+                    <img src="assets/images/circle logo.png" style="max-width: 300px;">
+                    <br><br>
+                    <p class="title is-3">Welcome to my website!</p>
+                    <p class="title is-5">Click the button below to see what's here!</p>
+                    <button class="button large is-primary is-large" style="width: 300px">Open website</button>
+                    <br><br><p class="subtitle is-6" style="opacity: 0.5;">(sound on!)</p>
             </div>
         </div>
     </section>
@@ -99,7 +99,7 @@
                 forwardSelection.play();
                 setTimeout(function () {
                     window.location = thisLink
-                }, 250);
+                }, 350);
             });
             links[i].removeAttribute("href");
         }

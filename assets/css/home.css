@@ -1,11 +1,11 @@
 
 @keyframes bumplink {
-    from {left: -20px}
-    to {left: 0px}
+    from {left: -20px; text-shadow: 0 0 0 rgba(0, 0, 0, .5);}
+    to {left: 0px; text-shadow: 0 5px 10px rgba(0, 0, 0, .5);}
 }
 @keyframes bumplinkback {
-    from {left: 20px}
-    to {left: 0px}
+    from {left: 20px; text-shadow: 0 5px 10px rgba(0, 0, 0, .5);}
+    to {left: 0px; text-shadow: 0 0 0 rgba(0, 0, 0, .5);}
 }
 @keyframes fadeout{
     from {
@@ -45,10 +45,12 @@
     0%{
         top: 0%;
         display: flex !important;
+        opacity: 1;
     }
     50%{
         top: -100%;
         display: flex !important;
+        opacity: .5;
     }
 }
 @keyframes zoomin{
@@ -72,6 +74,7 @@ hr{
 .link:hover{
     animation-name: bumplink;
     animation-duration: 0.1s;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, .5);
 }
 .link:hover::before{
     content: "➔ ";
