@@ -8,36 +8,68 @@
     <title>Wicycool - Stuff</title>
     <link rel="stylesheet" href="../assets/css/mystyles.css">
     <style>
-        @keyframes fadein{
-            from{bottom: 50px; opacity: 0;}
-            to{bottom: 0px; opacity: 1;}
-        }
-        .card{
-            position: relative;
-            animation-duration: 0.25s;
-            animation-fill-mode: backwards;
-        }
-        .tabs li.is-active a{
-            border-width: 2px;
+        #projects-view .column, #socialmedia-view .column{
+            margin-bottom: -24px;
         }
     </style>
 </head>
 
 <body>
-    <section class="hero is-fullheight">
-        <div class="hero-body">
-            
-            <div class="container is-widescreen has-text-left">
-                <p class="title is-5"><a class="" href="../">← Back to homepage</a></p>
-                <div class="tabs">
-                    <ul>
-                        <li><a>About</a></li>
-                        <li class="is-active"><a>Projects</a></li>
-                        <li><a>Social Media</a></li>
-                    </ul>
+    <section class="section fadein">
+        <div class="container is-widescreen has-text-left">
+            <p class="title is-5"><a class="" href="../"><span class="material-icons" style="vertical-align: middle;">arrow_back</span> <span style="vertical-align: middle;">Back to homepage</span></a></p>
+            <div class="tabs">
+                <ul>
+                    <li class="about-tab"><a href="#about">About</a></li>
+                    <li class="projects-tab"><a href="#projects">Projects</a></li>
+                    <li class="socialmedia-tab"><a href="#socialmedia">Social Media</a></li>
+                    <li class="branding-tab"><a href="#branding">Branding</a></li>
+                </ul>
+            </div>
+            <noscript>
+                <article class="message is-danger">
+                    <div class="message-header">
+                        <p>JavaScript Disabled</p>
+                    </div>
+                    <div class="message-body">
+                        It looks like JavaScript is currently disabled or not supported on your browser... <br> To see the Projects and Social Media sections, please enable Javascript!
+                    </div>
+                </article>
+                <br>
+            </noscript>
+            <div id="about-view">
+                <div class="columns">
+                    <div class="column is-two-thirds">
+                        <h1 class="title is-2">About Wicycool</h1>
+
+                        <p>Hey! I’m Wicycool. I make stuff sometimes.</p>
+                        <p>My pronouns are he/him and I live in the United States.</p>
+                        <p>I’ve made videos, live streams, branding, Scratch projects, and some other coding-based projects as well.</p>
+                        <br>
+                        <h1 class="title is-2">Q&A</h1>
+
+                        <h1 class="title is-4">What are your PC specs?</h1>
+                        <p>I use an HP OMEN 15-dc0051nr laptop, with an Intel Core i7-8750H, NVIDIA GeForce GTX 1060 6GB, and 16GB RAM.</p>
+                        <br>
+                        <h1 class="title is-4">What do you use to make your videos?</h1>
+                        <p>I use Vegas Pro 17 Edit and Kdenlive to edit, a Logitech Rock Band USB Microphone, an Elgato HD60s to record console
+                        footage, GIMP to make thumbnails and branding, and I use OBS Studio to stream and record PC footage.</p>
+                        <br>
+                        <h1 class="title is-4">What things have you made?</h1>
+                        <p>You can find some of the projects that I have made at my projects page <a>here</a>.</p>
+                        <br>
+                        <h1 class="title is-4">What social media accounts do you have?</h1>
+                        <p>You can find my list of social media accounts <a>here</a>.</p>
+                        <br>
+                        <h1 class="title is-4">Are you awesome?</h1>
+                        <p>Maybe. ;)</p>
+                    </div>
                 </div>
-                <h1 class="title is-2" id="projects">Projects </h1>
-                <noscript>It looks like JavaScript is disabled or not supported on your browser... To see projects, please enable JS! :)</noscript>
+            </div>
+            <noscript><br><hr><br></noscript>
+            <div id="projects-view">
+                <h1 class="title is-2">Projects </h1>
+                <noscript>Since JavaScript is disabled in your browser, you cannot see the Projects section. <br><br> <a href="../assets/json/projects.json">However, you are able to view the raw JSON data for it here.</a></noscript>
                 <div class="loading-indicator has-text-grey-dark" style="display: none;">Loading items...</div>
                 <div class="columns" id="projects-container">
                     <div class="column">
@@ -47,8 +79,28 @@
                     <div class="column">
                     </div>
                 </div>
-            </div>  
-        </div>
+            </div>
+            <noscript><br><hr><br></noscript>
+            <div id="socialmedia-view">
+                <h1 class="title is-2">Social Media</h1>
+                <noscript>Since JavaScript is disabled in your browser, you cannot see the Social Media section. <br><br> <a href="../assets/json/socialmedia.json">However, you are able to view the raw JSON data for it here.</a></noscript>
+                <div class="loading-indicator has-text-grey-dark" style="display: none;">Loading items...</div>
+                <div class="columns" id="socialmedia-container">
+                    <div class="column">
+                    </div>
+                    <div class="column">
+                    </div>
+                    <div class="column">
+                    </div>
+                </div>
+            </div>
+            <div id="branding-view">
+                <h1 class="title is-2">Wicycool Branding</h1>
+                <h1 class="subtitle is-5">The official branding for Wicycool-related things!</h1>
+                <a href="../"><p class="is-size-4 is-family-secondary"><span class="material-icons is-size-4" style="vertical-align: middle;">file_download</span> Download .zip</p>
+                <img src="../assets/images/branding.png" alt="Wicycool branding" class="mt-4" style="min-width: 80px; width: 800px;"></a>
+            </div>
+        </div> 
     </section>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
@@ -57,73 +109,193 @@
                 return '&#' + c.charCodeAt(0) + ';';
             });
         };
-        var projects = document.querySelector("#projects-container");
-        document.querySelector(".loading-indicator").style.display = "";
-        axios.get("../assets/json/projects.json")
-        .then(function(response){
-            document.querySelector(".loading-indicator").style.display = "none";
-            console.log(response.data);
-            //console.log(response.data.length);
-            var hoverSound = new Audio('../assets/sound/wav/03/custom_fadein.wav');
-            for (let i = 0; i < response.data.length; i++){
-                switch(response.data[i]["type"]){
-                    case "scratch":
-                        typeName = "Scratch";
-                        typeImage = `url('https://scratch.mit.edu/favicon.ico')`;
-                    break;
-                    case "video":
-                        typeName = "Video";
-                        typeImage = `url('https://www.youtube.com/s/desktop/4fc9328c/img/favicon_144.png')`;
-                    break;
-                    case "scratchaddons":
-                        typeName = "Addon for ScratchAddons";
-                        typeImage = `url('https://scratchaddons.com/assets/images/icon.svg')`;
-                    break;
-                    case "video-series":
-                        typeName = "Video Series";
-                        typeImage = `url('https://www.youtube.com/s/desktop/4fc9328c/img/favicon_144.png')`;
-                    break;
-                    case "artwork":
-                        typeName = "Artwork";
-                        typeImage = `url('../assets/images/brush-white-24dp.svg')`;
-                    break;
-                    default:
-                        currentCardMediaContentSubtitle.innerText = "";
+        function loadProjects(){
+            var projects = document.querySelector("#projects-container");
+            document.querySelector("#projects-view .loading-indicator").style.display = "";
+            axios.get("../assets/json/projects.json")
+            .then(function(response){
+                document.querySelector("#projects-view .loading-indicator").style.display = "none";
+                var fadeInSound = new Audio('../assets/sound/wav/03/custom_fadein.wav');
+                for (let i = 0; i < response.data.projects.length; i++){
+                    if (response.data.types[response.data.projects[i]["type"]] != null){
+                        typeName = response.data.types[response.data.projects[i]["type"]]["name"];
+                        typeImage = response.data.types[response.data.projects[i]["type"]]["icon"]
+                    } else {
+                        typeName.innerText = "";
                         typeImage = `url('../assets/images/help_outline-white-24dp.svg')`;
-                    break;
-                }
-                finalCard = document.querySelector(`#projects-container .column:nth-child(${i % 3 + 1})`).insertAdjacentHTML("beforeend", `
-                    <a class="linktocard" href="${sanitizeHTML(response.data[i]["link"])}">
-                        <div class="card mb-5" style="opacity: 1; animation-delay: ${i*50}ms; animation-name: fadein;">
-                            <div class="card-image">
-                                <figure class="image is-4by3">
-                                    <img class="" src="../assets/images/empty.png" style='background: center / cover no-repeat url(${response.data[i]["thumbnail"]})'>
-                                </figure>
-                            </div>
-                            <div class="card-content">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <figure class="image is-24x24" style="background-size: contain; background-image: ${sanitizeHTML(typeImage)};"></figure>
-                                    </div>
-                                    <div class="media-content">
-                                        <p class="title is-4">${sanitizeHTML(response.data[i]["name"])}</p>
-                                        <p class="subtitle is-6">${sanitizeHTML(typeName)}</p>
-                                        <p class="is-size-7">${sanitizeHTML(response.data[i]["description"])}</p>
+                    }
+                    if (response.data.projects[i]["link"].includes("javascript:")){
+                        throw "XSS attempt";
+                    }
+                    finalCard = document.querySelector(`#projects-container .column:nth-child(${i % 3 + 1})`).insertAdjacentHTML("beforeend", `
+                        <a class="linktocard" href="${sanitizeHTML(response.data.projects[i]["link"])}">
+                            <div class="card mb-5" style="opacity: 1; animation-delay: ${i*50}ms; animation-name: cardfadein;">
+                                <div class="card-image">
+                                    <figure class="image is-${sanitizeHTML(response.data.projects[i]["thumbnail-aspect"])}">
+                                        <img class="" alt="Thumbnail for ${sanitizeHTML(response.data.projects[i]["name"])}" src="../assets/images/empty.png" style='background: center / cover no-repeat url(${sanitizeHTML(response.data.projects[i]["thumbnail"])})'>
+                                    </figure>
+                                </div>
+                                <div class="card-content">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <figure class="image is-24x24 mt-2" style="background-size: contain; background-position: center; background-repeat: no-repeat; background-image: url('${sanitizeHTML(typeImage)}');"></figure>
+                                        </div>
+                                        <div class="media-content">
+                                            <p class="is-family-secondary is-size-4">${sanitizeHTML(response.data.projects[i]["name"])}</p>
+                                            <p class="is-family-secondary is-size-6 mb-2 mt-1">${sanitizeHTML(typeName)}</p>
+                                            <p class="is-family-secondary is-size-7">${sanitizeHTML(response.data.projects[i]["description"])}</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
-                `);
-                setTimeout(function () {
-                    hoverSound.currentTime = 0;
-                    hoverSound.play();
-                }, i * 50);
+                        </a>
+                    `);
+                    setTimeout(function () {
+                        fadeInSound.currentTime = 0;
+                        fadeInSound.play();
+                    }, i * 50);
+                }
+                
+            }).catch(function(error){
+                console.log(error);
+                document.querySelector("#projects-view .loading-indicator").style.display = "none";
+                document.querySelector(`#projects-container`).innerText = "Failed getting projects... let Wicycool know or try again later! :)";
+            });
+        }
+
+        function loadSocialMedia(){
+            var projects = document.querySelector("#socialmedia-container");
+            document.querySelector("#socialmedia-view .loading-indicator").style.display = "";
+            axios.get("../assets/json/socialmedia.json")
+            .then(function(response){
+                document.querySelector("#socialmedia-view .loading-indicator").style.display = "none";
+                var fadeInSound = new Audio('../assets/sound/wav/03/custom_fadein.wav');
+                for (let i = 0; i < response.data.length; i++){
+                    if (response.data[i]["link"].includes("javascript:")){
+                        throw "XSS attempt";
+                    }
+                    finalCard = document.querySelector(`#socialmedia-container .column:nth-child(${i % 3 + 1})`).insertAdjacentHTML("beforeend", `
+                        <a class="linktocard" href="${sanitizeHTML(response.data[i]["link"])}">
+                            <div class="card mb-5" style="opacity: 1; animation-delay: ${i*50}ms; animation-name: cardfadein; background-color: ${sanitizeHTML(response.data[i]["color"])}">
+                                <div class="card-content">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <figure class="image is-24x24 mt-2" style="background-size: contain; background-position: center; background-repeat: no-repeat; background-image: url('${sanitizeHTML(response.data[i]["socialmedia-icon"])}');"></figure>
+                                        </div>
+                                        <div class="media-content">
+                                            <p class="is-family-secondary is-size-4">${sanitizeHTML(response.data[i]["socialmedia-name"])}</p>
+                                            <p class="is-family-secondary is-size-6 mb-2 mt-1">${sanitizeHTML(response.data[i]["username"])}</p>
+                                            <p class="is-family-secondary is-size-7">${sanitizeHTML(response.data[i]["description"])}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    `);
+                    setTimeout(function () {
+                        fadeInSound.currentTime = 0;
+                        fadeInSound.play();
+                    }, i * 50);
+                }
+                
+            }).catch(function(error){
+                console.log(error);
+                document.querySelector("#socialmedia-view .loading-indicator").style.display = "none";
+                document.querySelector(`#socialmedia-container`).innerText = "Failed getting accounts... let Wicycool know or try again later! :)";
+            });
+        }
+        
+        function updatePageState(pageState){
+            if (pageState){
+
+            }else{
+                switch (location.hash){
+                    case "#about":
+                        document.getElementById("about-view").style.display = "block";
+                        document.getElementById("projects-view").style.display = "none";
+                        document.getElementById("socialmedia-view").style.display = "none";
+                        document.getElementById("branding-view").style.display = "none";
+                        document.querySelector('.about-tab').classList.add("is-active");
+                        document.querySelector('.projects-tab').classList.remove("is-active");
+                        document.querySelector('.socialmedia-tab').classList.remove("is-active");
+                        document.querySelector('.branding-tab').classList.remove("is-active");
+                    break;
+                    case "#projects":
+                        document.getElementById("about-view").style.display = "none";
+                        document.getElementById("projects-view").style.display = "block";
+                        document.getElementById("socialmedia-view").style.display = "none";
+                        document.getElementById("branding-view").style.display = "none";
+                        document.querySelector('.about-tab').classList.remove("is-active");
+                        document.querySelector('.projects-tab').classList.add("is-active");
+                        document.querySelector('.socialmedia-tab').classList.remove("is-active");
+                        document.querySelector('.branding-tab').classList.remove("is-active");
+                        document.querySelector(`#projects-container`).innerHTML = `
+                            <div class="column">
+                            </div>
+                            <div class="column">
+                            </div>
+                            <div class="column">
+                            </div>
+                        `
+                        loadProjects();
+                    break;
+                    case "#socialmedia":
+                        document.getElementById("about-view").style.display = "none";
+                        document.getElementById("projects-view").style.display = "none";
+                        document.getElementById("socialmedia-view").style.display = "block";
+                        document.getElementById("branding-view").style.display = "none";
+                        document.querySelector('.about-tab').classList.remove("is-active");
+                        document.querySelector('.projects-tab').classList.remove("is-active");
+                        document.querySelector('.socialmedia-tab').classList.add("is-active");
+                        document.querySelector('.branding-tab').classList.remove("is-active");
+                        document.querySelector(`#socialmedia-container`).innerHTML = `
+                            <div class="column">
+                            </div>
+                            <div class="column">
+                            </div>
+                            <div class="column">
+                            </div>
+                        `
+                        loadSocialMedia()
+                    break;
+                    case "#branding":
+                        document.getElementById("about-view").style.display = "none";
+                        document.getElementById("projects-view").style.display = "none";
+                        document.getElementById("socialmedia-view").style.display = "none";
+                        document.getElementById("branding-view").style.display = "block";
+                        document.querySelector('.about-tab').classList.remove("is-active");
+                        document.querySelector('.projects-tab').classList.remove("is-active");
+                        document.querySelector('.socialmedia-tab').classList.remove("is-active");
+                        document.querySelector('.branding-tab').classList.add("is-active");
+                    break;
+                    default:
+                        document.getElementById("about-view").style.display = "none";
+                        document.getElementById("projects-view").style.display = "none"; 
+                        document.getElementById("socialmedia-view").style.display = "none"; 
+                        document.getElementById("branding-view").style.display = "none";
+                        document.querySelector('.about-tab').classList.remove("is-active");
+                        document.querySelector('.projects-tab').classList.remove("is-active");
+                        document.querySelector('.socialmedia-tab').classList.remove("is-active");
+                        document.querySelector('.branding-tab').classList.remove("is-active");
+                        location.hash = "about";
+                    break;
+                } 
             }
             
-        }).catch(function(error){
-            document.querySelector(".loading-indicator").style.display = "none";
-            document.querySelector(`#projects-container`).innerText = "Failed getting projects... let Wicycool know or try again later! :)";
+        }
+        window.addEventListener("hashchange", function(){
+            updatePageState()
         });
+        updatePageState()
+
+        var hoverSound = new Audio('../assets/sound/wav/03/ui_tap-variant-01.wav');
+
+        var tabs = document.querySelectorAll(".tabs a");
+        for (var i = 0; i < tabs.length; i++) {
+            tabs[i].addEventListener('click', function () {
+                hoverSound.currentTime = 0;
+                hoverSound.play();
+            });
+        }
     </script>
 </body>

@@ -7,21 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Wicycool - Privacy Policy</title>
     <link rel="stylesheet" href="../assets/css/mystyles.css">
-    <style>
-    </style>
 </head>
 
 <body>
-    <section class="hero is-fullheight">
+    <section class="hero is-fullheight fadein">
         <div class="hero-body ">
             <div class="container is-widescreen has-text-left">
-                <p class="title is-5"><a class="" href="../">← Back to homepage</a></p>
-                <h1 class="title is-2">Wicycool Privacy Policy</h1>
+                <p class="title is-5"><a class="" href="../"><span class="material-icons" style="vertical-align: middle;">arrow_back</span> <span style="vertical-align: middle;">Back to homepage</a></p>
                 <div class="columns">
                     <div class="column is-two-thirds">
-                        <p>I'll be honest, I don't know how to write a privacy policy,
-                        nor do I want to use a service to create one.</p>
-                        <br>
+                        <h1 class="title is-2">Privacy Policy</h1>
                         <p>I use both Google Fonts and Google Analytics on my webiste,
                         and some info about what they collect, how to opt out, and
                         what they do with their info can be found <a href="https://policies.google.com/technologies/partner-sites">here</a>.</p>
@@ -31,16 +26,43 @@
                         <br>
                         <p>If you need to contact me for some reason, please use my email:</p>
                         <br>
-                        <p>wicycool</p>
-                        <br>
-                        <p>(@ at)</p>
-                        <br>
-                        <p>wicy.cool</p>
+                        <p>
+                            <code>
+                                wicycool (@ at) wicy (. dot) cool
+                            </code>
+                        </p>
                         <br>
                         <p>(Business purposes/impotant things only please!)</p>
+                        <br>
+                        <h1 class="title is-2">Licenses</h1>
+                        <p>This website uses <a href="https://fonts.google.com/icons?selected=Material+Icons">Material Icons</a>, which are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0.html">Apache license 2.0</a>.</p>
+                        <p>This website uses <a href="https://bulma.io/">Bulma</a>, which is licensed under the <a href="https://opensource.org/licenses/mit-license.php">MIT license</a>.</p>
+                        <p>This website uses <a href="https://material.io/design/sound/sound-resources.html">Material Sounds</a>, which are licensed under the <a href="https://creativecommons.org/licenses/by/4.0/legalcode">CC-BY 4.0 license</a> with modifications to some of the sounds.</p>
+                        <br>
+                        <p>All trademarks are the property of their respective owners.</p>
+                        <br>
+                        <h1 class="title is2-">Source Code</h1>
+                        <p>This website's source code can be found <a href="https://github.com/Wicycool/project-blueberry">on GitHub</a>, and is licensed under the <a href="https://github.com/Wicycool/project-blueberry/blob/main/LICENSE">GNU General Public License v3.0</a>.</p>
+                        <br>
+                        <div id="last-updated" style="display: none">
+                            <span></span>
+                            <a></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        axios.get("https://api.github.com/repos/Ezlambry/ezlambry.github.io/commits?page=1&per_page=1")
+        .then(function(response){
+            document.querySelector("#last-updated").style.display = "inline";
+            document.querySelector("#last-updated span").innerText = `Website last updated: `;
+            document.querySelector("#last-updated a").innerText = new Date(response.data[0]["commit"]["author"]["date"]);
+            document.querySelector("#last-updated a").href = response.data[0]["html_url"];
+        }).catch(function(error){
+            console.log(error);
+        });
+    </script>
 </body>
