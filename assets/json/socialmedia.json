@@ -37,6 +37,13 @@
         "description": "See Wicycool's contributions to open source projects and his own repositories!",
         "color": "#171515"
     },{
+        "socialmedia-name": "Newgrounds",
+        "link": "https://wicycool.newgrounds.com/",
+        "socialmedia-icon": "https://www.newgrounds.com/img/misc/dl-tank.gif",
+        "username": "@Wicycool",
+        "description": "Check out my games on Newgrounds!",
+        "color": "#FFB50E"
+    },{
         "socialmedia-name": "Twitch",
         "link": "https://twitch.tv/wicycool/",
         "socialmedia-icon": "https://brand.twitch.tv/assets/images/black.png",
