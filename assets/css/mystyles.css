@@ -7905,8 +7905,7 @@ hr {
   right: 0;
   position: fixed;
   display: none; }
-
-#homepage #windowblind .hero-body {
-  text-align: center !important;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url("/assets/images/background.webp") center;
-  background-size: cover; }
+  #homepage #windowblind .hero-body {
+    text-align: center !important;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url("/assets/images/background.webp") center;
+    background-size: cover; }

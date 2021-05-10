@@ -155,28 +155,32 @@ hr{
     animation-duration: 0.5s;
 }
 
-#homepage #main{
-    max-width: 1280px;
-}
-
-#homepage #main-wrapper{
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), $pixelbackground center;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-#homepage #logo-window{
-    border-radius: 1em;
-    background: $pixelbackground center;
-    background-size: cover;
-    background-attachment: fixed;
-    box-shadow: 0 5px 10px 0px rgba(0, 0, 0, .2);
-}
-
-#homepage #windowblind{
-    top: 0%; left: 0; right: 0; position: fixed; display: none;
-}
-
-#homepage #windowblind .hero-body{
-    text-align: center !important; background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), $pixelbackground center; background-size: cover;
+#homepage{
+    #main{
+        max-width: 1280px;
+    }
+    #main-wrapper{
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), $pixelbackground center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    #logo-window{
+        border-radius: 1em;
+        background: $pixelbackground center;
+        background-size: cover;
+        background-attachment: fixed;
+        box-shadow: 0 5px 10px 0px rgba(0, 0, 0, .2);
+    }
+    #windowblind{
+        top: 0%;
+        left: 0;
+        right: 0;
+        position: fixed;
+        display: none;
+        .hero-body{
+            text-align: center !important;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), $pixelbackground center;
+            background-size: cover;
+        }
+    }
 }
