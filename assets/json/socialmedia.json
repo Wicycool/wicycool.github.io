@@ -14,6 +14,13 @@
         "username": "@Wicycool",
         "description": "Get Tweets from Wicycool here!",
         "color": "#1DA1F2"
+    },{
+        "socialmedia-name": "Twitch",
+        "link": "https://twitch.tv/wicycool/",
+        "socialmedia-icon": "https://brand.twitch.tv/assets/images/black.png",
+        "username": "@Wicycool",
+        "description": "Watch Wicycool's livestreams!",
+        "color": "#9046FE"
     },
     {
         "socialmedia-name": "Scratch",
@@ -22,82 +29,85 @@
         "username": "@Wicycool",
         "description": "See Wicycool's projects here!",
         "color": "#C4852D"
-    },{
-        "socialmedia-name": "Scratch (legacy)",
-        "link": "https://scratch.mit.edu/users/Ezlambry",
-        "socialmedia-icon": "https://scratch.mit.edu/favicon.ico",
-        "username": "@Ezlambry",
-        "description": "See Wicycools's old projects here!",
-        "color": "#806540"
-    },{
-        "socialmedia-name": "GitHub",
-        "link": "https://github.com/Wicycool/",
-        "socialmedia-icon": "https://github.githubassets.com/favicons/favicon-dark.png",
-        "username": "@Wicycool",
-        "description": "See Wicycool's contributions to open source projects and his own repositories!",
-        "color": "#171515"
-    },{
-        "socialmedia-name": "Newgrounds",
-        "link": "https://wicycool.newgrounds.com/",
-        "socialmedia-icon": "https://www.newgrounds.com/img/misc/dl-tank.gif",
-        "username": "@Wicycool",
-        "description": "Check out my games on Newgrounds!",
-        "color": "#FFB50E"
-    },{
-        "socialmedia-name": "Twitch",
-        "link": "https://twitch.tv/wicycool/",
-        "socialmedia-icon": "https://brand.twitch.tv/assets/images/black.png",
-        "username": "@Wicycool",
-        "description": "Watch Wicycool's livestreams!",
-        "color": "#9046FE"
-    },{
+    },
+    {
         "socialmedia-name": "Discord",
         "link": "https://discord.gg/SFtZAz3",
         "socialmedia-icon": "https://discord.com/assets/1c8a54f25d101bdc607cec7228247a9a.svg",
         "username": "discord.gg/SFtZAz3",
         "description": "Talk with other people about Wicycool-related things in the Discord server!",
         "color": "#7289DA"
-    },{
+    },
+    {
+        "socialmedia-name": "GitHub",
+        "link": "https://github.com/Wicycool/",
+        "socialmedia-icon": "https://github.githubassets.com/favicons/favicon-dark.png",
+        "username": "@Wicycool",
+        "description": "See Wicycool's contributions to open source projects and his own repositories!",
+        "color": "#171515"
+    },
+    {
+        "socialmedia-name": "Scratch (legacy)",
+        "link": "https://scratch.mit.edu/users/Ezlambry",
+        "socialmedia-icon": "https://scratch.mit.edu/favicon.ico",
+        "username": "@Ezlambry",
+        "description": "See Wicycools's old projects here!",
+        "color": "#806540"
+    },
+    {
+        "socialmedia-name": "Newgrounds",
+        "link": "https://wicycool.newgrounds.com/",
+        "socialmedia-icon": "https://www.newgrounds.com/img/misc/dl-tank.gif",
+        "username": "@Wicycool",
+        "description": "Check out my stuff on Newgrounds!",
+        "color": "#FFB50E"
+    },
+    {
         "socialmedia-name": "Roblox",
         "link": "https://www.roblox.com/users/63683267/profile",
         "socialmedia-icon": "https://upload.wikimedia.org/wikipedia/commons/4/48/Roblox_Player_icon.png",
         "username": "@Wicycool",
         "description": "Oof!",
         "color": "#666"
-    },{
+    },
+    {
         "socialmedia-name": "Steam",
         "link": "https://steamcommunity.com/id/Wicycool/",
         "socialmedia-icon": "https://store.steampowered.com/favicon.ico",
         "username": "@Wicycool",
         "description": "Look at my Steam profile!",
         "color": "#1B2838"
-    },{
+    },
+    {
         "socialmedia-name": "byte",
         "link": "https://byte.co/@wicycool",
         "socialmedia-icon": "https://byte.co/favicon.ico",
         "username": "@Wicycool",
         "description": "What was byte again?",
         "color": "#5431C3"
-    },{
+    },
+    {
         "socialmedia-name": "TikTok",
         "link": "https://www.roblox.com/users/63683267/profile",
         "socialmedia-icon": "/assets/images/tiktok-logo.png",
         "username": "@Wicycool",
         "description": "I don't use TikTok.",
         "color": "#EF2950"
-    },{
+    },
+    {
         "socialmedia-name": "SoundCloud",
         "link": "https://soundcloud.com/wicycool",
         "socialmedia-icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAWCAQAAAAs/tcnAAABMUlEQVR4Ac3UJfQUARTGUaxnrBHpPeDu7u7uTg/QO/SK9q1U3KHg2i7fH4exNeSdc9/ZNL/RHfRfjdHOuOajt246b7Fh/T38WO/9OnfM7s+hx3gUh5XNWYN7D4wnTlOe6OGsv/6eQlQFmNX9WScTs4jqwD3DOr/j04gJxHyiOsCiTgITibnEdGIJURc410lgJrGYmE+sIuoCz1301BstGwxueqQLiVXEMmI9cVp7c9WIYmAqkUysIjYQa4mtRAJtJwb//kgXEdOJTcR2Yiuxi2g/wIYfgTnEBmIFsYvYS+whDhCdBFo/ApuJvcRO4hBxhDhMHCU6Cbz5EThKHCe+7BNEcXceKFxB/e7yFs0h1hP1u/OHXHiL6nfnr2nhO6jfR3r50L5cR9O+oX5+/FX8vfkElmh0Xu+KRLEAAAAASUVORK5CYII=",
         "username": "@Wicycool",
         "description": "I don't really make music...",
         "color": "#FF3300"
-    },{
+    },
+    {
         "socialmedia-name": "Instagram",
         "link": "https://www.instagram.com/wicycool/",
         "socialmedia-icon": "https://www.instagram.com/favicon.ico",
         "username": "@Wicycool",
-        "description": "I don't use Instagram",
+        "description": "I don't use Instagram.",
         "color": "#AD34AF"
     }
 ]

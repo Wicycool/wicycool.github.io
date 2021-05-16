@@ -1,11 +1,11 @@
 {
     "projects": [
         {
-            "name": "EzOS",
-            "type": "scratch",
-            "description": "An operating system created in Scratch.",
-            "link": "https://scratch.mit.edu/projects/151253089/",
-            "thumbnail": "https://cdn2.scratch.mit.edu/get_image/project/151253089_480x360.png",
+            "name": "Kevintendo 2020 Branding",
+            "type": "artwork",
+            "description": "Logos and channel artwork that I created for Kevintendo for his 2020 rebranding.",
+            "link": "https://drive.google.com/drive/u/0/folders/1SVj5UWJxDDHy42JKQ_eCZ6QhLabyNZ32",
+            "thumbnail": "../assets/images/k10-2020-branding.png",
             "thumbnail-aspect": "4by3"
         },
         {
@@ -14,14 +14,6 @@
             "description": "A multiplayer version of Griffpatch's Scratch recreation of Getting Over It.",
             "link": "https://scratch.mit.edu/projects/396122003/",
             "thumbnail": "https://cdn2.scratch.mit.edu/get_image/project/396122003_480x360.png",
-            "thumbnail-aspect": "4by3"
-        },
-        {
-            "name": "This Button Has Been Pressed ????? Times",
-            "type": "scratch",
-            "description": "How many times has this button been pressed? I don't know!",
-            "link": "https://scratch.mit.edu/projects/419580029/",
-            "thumbnail": "https://cdn2.scratch.mit.edu/get_image/project/419580029_480x360.png",
             "thumbnail-aspect": "4by3"
         },
         {
@@ -41,6 +33,14 @@
             "thumbnail-aspect": "16by9"
         },
         {
+            "name": "This Button Has Been Pressed ????? Times",
+            "type": "scratch",
+            "description": "How many times has this button been pressed? I don't know!",
+            "link": "https://scratch.mit.edu/projects/419580029/",
+            "thumbnail": "https://cdn2.scratch.mit.edu/get_image/project/419580029_480x360.png",
+            "thumbnail-aspect": "4by3"
+        },
+        {
             "name": "Why Bees Are the Cutest Mobs in Minecraft",
             "type": "video",
             "description": "A video about the very cute mob in Minecraft: Bees!!",
@@ -49,20 +49,20 @@
             "thumbnail-aspect": "16by9"
         },
         {
+            "name": "EzOS",
+            "type": "scratch",
+            "description": "An operating system created in Scratch.",
+            "link": "https://scratch.mit.edu/projects/151253089/",
+            "thumbnail": "https://cdn2.scratch.mit.edu/get_image/project/151253089_480x360.png",
+            "thumbnail-aspect": "4by3"
+        },
+        {
             "name": "Livestreams",
             "type": "video-series",
             "description": "All of the livestreams I have done.",
             "link": "https://www.youtube.com/playlist?list=PLQ7FZ3d0mAl7TSChtAbEqPjQ8UzAYb4Ks",
             "thumbnail": "../assets/images/ezstream.jpg",
             "thumbnail-aspect": "16by9"
-        },
-        {
-            "name": "Kevintendo 2020 Branding",
-            "type": "artwork",
-            "description": "Logos and channel artwork that I created for Kevintendo for his 2020 rebranding.",
-            "link": "https://drive.google.com/drive/u/0/folders/1SVj5UWJxDDHy42JKQ_eCZ6QhLabyNZ32",
-            "thumbnail": "../assets/images/k10-2020-branding.png",
-            "thumbnail-aspect": "4by3"
         }
     ],
     "types": {
@@ -76,7 +76,7 @@
         },
         "scratchaddons": {
             "name": "Addon for ScratchAddons",
-            "icon": "https://scratchaddons.com/assets/images/icon.svg"
+            "icon": "https://scratchaddons.com/assets/img/icon.svg"
         },
         "video-series": {
             "name": "Video Series",
