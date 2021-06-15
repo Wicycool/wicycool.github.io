@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=0.75">
+        <title>EzMusic Documentation</title>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-G5YBWB1DP4"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-G5YBWB1DP4');
+        </script>
+        <style>
+            body{
+                font-family: 'Lato', sans-serif;
+                padding: 0;
+                margin: 0;
+                background-color: #E8E8E8;
+            }
+            .montserrat,h1,h2,h3,h4,h5,h6{
+                font-family: 'Montserrat', sans-serif;
+            }
+            #ezmusic-logo img{
+                width: 100px;
+                border-radius: 50%;
+                vertical-align: middle;
+                margin-right: 20px;
+            }
+            #ezmusic-logo span{
+                font-family: 'Montserrat', sans-serif;
+                font-size: 48px;
+                vertical-align: middle;
+                background: -webkit-linear-gradient(#bf2c8a, #b4193b);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            #ezmusic-logo{
+                color: white;
+                box-shadow: 0 0 50px 0 rgba(0, 0, 0, .25);
+                display: inline-block;
+                border-radius: 50px;
+                margin: 50px;
+                margin-bottom: 0;
+                padding-right: 50px;
+            }
+            #main{
+                margin: 50px;
+                padding: 20px;
+                background-color: white;
+                border-radius: 20px;
+                box-shadow: 0 0 50px 0 rgba(0, 0, 0, .25);
+            }
+            a{
+                text-decoration: none;
+                background: -webkit-linear-gradient(#bf2c8a, #b4193b);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            a:hover{
+                opacity: 0.75;
+            }
+            .command{
+                background-color: #383838;
+                color: white;
+                padding: 10px;
+                display: inline-block;
+                border-radius: 10px;
+                margin: 10px;
+            }
+            .command span{
+                font-size: 24px;
+                display: block;
+            }
+            @media only screen and (max-width: 480px){
+                #main{
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
+                #ezmusic-logo{
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    padding-right: 25px;
+                }
+                #ezmusic-logo span{
+                    font-size: 36px;
+                }
+                #ezmusic-logo img{
+                    width: 75px;
+                    margin-right: 15px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+        <div id="ezmusic-logo">
+            <img src="EzMusic.png">
+            <span>EzMusic</span>
+        </div>
+        <div id="main">
+            <h1>About EzMusic</h1>
+            <p>EzMusic is a music bot using <a href="https://github.com/jagrosh/MusicBot">jagrosh's JMusicBot, a music bot that is easy to host yourself!</a></p>
+            <p>EzMusic is only in <a href="https://ezlambry.com/joindiscord">Ezlambry's Discord servers</a> and <a href="http://tiny.cc/kevdiscord">Kevintendo's Discord server</a> and is not available in any other servers.</p>
+            
+            
+            
+            <h1>Differences between Fredboat</h1>
+            <p>Because this bot replaces Fredboat, some changes were made to make the commands more similar. These can be found in the <a href="#command-aliases">Command aliases</a> section below. However, there are some major differences you needed to know:</p>
+            
+            <h2>When you leave the Music VC</h2>
+            <p>When you're by yourself and you leave the Music VC, PLEASE and I mean <span style="text-decoration: underline; font-weight: bold; font-style: italic; background-color: yellow;">PLEASE ALWAYS STOP THE BOT BEFORE YOU LEAVE.</span> If you leave it playing, it will keep playing until the music stops, even if no one's in the VC. To save my internet's bandwidth, please just use ;;stop before you leave the VC.</p>
+            
+            <h2>Difference between ;;play and ;;p</h2>
+            <p>;;p is used to SEARCH for things, and ;;play is used to DIRECTLY LOAD FROM LINKS. This means that you should do something like this:</p>
+            <div class="command">;;play https://www.youtube.com/watch?v=dQw4w9WgXcQ</div> - loading a song directly from a link <br>
+            <div class="command">;;p Rick roll</div> - loading a song by searching
+            
+            <h2>Difference between ;;skip and ;;s</h2>
+            <p>;;skip is used to do a VOTE skip, while ;;s FORCE skips it, without needing any votes. You will need to so something like this:</p>
+            <div class="command">;;skip</div> - Add a vote to skip a song <br>
+            <div class="command">;;s</div> - Force the current ssong to be skipped
+            
+            
+            
+            <h1>Commands</h1>
+            <h3>Music</h3>
+            <div class="command"><span>;;about</span>shows info about the bot</div>
+            <div class="command"><span>;;ping </span>checks the bot's latency</div>
+            <div class="command"><span>;;settings </span>shows the bots settings</div>
+            <div class="command"><span>;;lyrics [song name]</span> shows the lyrics to the currently-playing song</div>
+            <div class="command"><span>;;nowplaying</span>shows the song that is currently playing</div>
+            <div class="command"><span>;;play &lt;title|URL|subcommand&gt;</span> plays the provided song</div>
+            <div class="command"><span>;;queue [pagenum]</span> shows the current queue</div>
+            <div class="command"><span>;;remove &lt;position|ALL&gt;</span>removes a song from the queue</div>
+            <div class="command"><span>;;search &lt;query&gt;</span>searches Youtube for a provided query</div>
+            <div class="command"><span>;;scsearch &lt;query&gt;</span> searches Soundcloud for a provided query</div>
+            <div class="command"><span>;;shuffle </span>shuffles songs you have added</div>
+            <div class="command"><span>;;skip </span>votes to skip the current song</div>
+            <h3>DJ</h3>
+            <div class="command"><span>;;forceremove &lt;user&gt;</span>removes all entries by a user from the queue</div>
+            <div class="command"><span>;;forceskip </span> skips the current song</div>
+            <div class="command"><span>;;movetrack &lt;from&gt; &lt;to&gt;</span> move a track in the current queue to a different position</div>
+            <div class="command"><span>;;pause </span>pauses the current song</div>
+            <div class="command"><span>;;playnext &lt;title|URL&gt;</span>plays a single song next</div>
+            <div class="command"><span>;;repeat [on|off]</span> re-adds music to the queue when finished</div>
+            <div class="command"><span>;;skipto &lt;position&gt;</span>skips to the specified song</div>
+            <div class="command"><span>;;stop </span>stops the current song and clears the queue</div>
+            <div class="command"><span>;;volume [0-150]</span>sets or shows volume</div>
+            <h3>More commands can be found by using the ;;help command.</h3>
+            
+            
+            
+            <a name="command-aliases"></a><h1>Command aliases</h1>
+            <div class="command">
+                <span>;;nowplaying</span>
+                ;;np ;;current
+            </div>
+            <div class="command">
+                <span>;;playlists</span>
+                ;;pls
+            </div>
+            <div class="command">
+                <span>;;queue</span>
+                ;;list ;;q
+            </div>
+            <div class="command">
+                <span>;;remove</span>
+                ;;delete
+            </div>
+            <div class="command">
+                <span>;;search</span>
+                ;;ytsearch ;;p
+            </div>
+            <div class="command">
+                <span>;;skip</span>
+                ;;voteskip
+            </div>
+            <div class="command">
+                <span>;;forceremove</span>
+                ;;forcedelete ;;modremove ;;moddelete ;;modelete ;;r
+            </div>
+            <div class="command">
+                <span>;;forceskip</span>
+                ;;modskip ;;s
+            </div>
+            <div class="command">
+                <span>;;movetrack</span>
+                ;;move
+            </div>
+            <div class="command">
+                <span>;;repeat</span>
+                ;;loop
+            </div>
+            <div class="command">
+                <span>;;skipto</span>
+                ;;jumpto
+            </div>
+            <div class="command">
+                <span>;;stop</span>
+                ;;leave
+            </div>
+            <div class="command">
+                <span>;;volume</span>
+                ;;vol
+            </div>
+            <h1>Contact</h1>
+            <p>If you need more assistance, please contact <a href="https://twitter.com/ezlambry">@Ezlambry on Twitter</a> or ask for help at the EzServers Discord server.</p>
+            <h2><a href="https://discord.gg/xwfe8cw"><img src="ez%20server%20logo%20resized.png" style="width: 48px; border-radius: 24px; vertical-align: middle; margin-right: 20px;">Test things out and get updates on EzMusic at the EzServers Discord server!</a></h2>
+        </div>
+        <div style="text-align: center; margin-bottom: 40px;">
+            <a href="https://ezlambry.github.io" style="display: block;"><img src="../resources/ezlambry%20logo%20red.png" style="width: 200px;"></a>
+            <span style="color: gray;">Website created by Ezlambry, 2020</span>
+        </div>
+    </body>
+</html>

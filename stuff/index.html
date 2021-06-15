@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Wicycool - Stuff</title>
-    <link rel="stylesheet" href="../assets/css/mystyles.css">
+    <link rel="stylesheet" href="/assets/css/mystyles.css">
     <style>
         #projects-view .column, #socialmedia-view .column{
             margin-bottom: -24px;
@@ -56,10 +56,10 @@
                         footage, GIMP to make thumbnails and branding, and I use OBS Studio to stream and record PC footage.</p>
                         <br>
                         <h1 class="title is-4">What things have you made?</h1>
-                        <p>You can find some of the projects that I have made at my projects page <a>here</a>.</p>
+                        <p>You can find some of the projects that I have made at my projects page <a href="#projects">here</a>.</p>
                         <br>
                         <h1 class="title is-4">What social media accounts do you have?</h1>
-                        <p>You can find my list of social media accounts <a>here</a>.</p>
+                        <p>You can find my list of social media accounts <a href="#socialmedia">here</a>.</p>
                         <br>
                         <h1 class="title is-4">Are you awesome?</h1>
                         <p>Maybe. ;)</p>
@@ -102,7 +102,7 @@
                     <img src="../assets/images/branding.png" alt="Wicycool branding" class="mt-4 mb-4" style="min-width: 80px; width: 800px;">
                 </a>
                 <h1 class="title is-3">Branding guidelines</h1>
-                <p>Feel free to do anything with my logos AS LONG AS you DON'T use it for anything other than things related to me or my content.</p>
+                <p>Feel free to do anything with my logos AS LONG AS it is ONLY USED for things related to me or my content.</p>
                 <p>You can recolor it, resize it, make additions to it, or whatever, I don't care. Just make sure it stays recognizable.</p>
             </div>
         </div> 
@@ -210,30 +210,33 @@
             });
         }
         
+        function hideViewsAndResetTabs(){
+            document.getElementById("about-view").style.display = "none";
+            document.getElementById("projects-view").style.display = "none";
+            document.getElementById("socialmedia-view").style.display = "none";
+            document.getElementById("branding-view").style.display = "none";
+            document.querySelector('.about-tab').classList.remove("is-active");
+            document.querySelector('.projects-tab').classList.remove("is-active");
+            document.querySelector('.socialmedia-tab').classList.remove("is-active");
+            document.querySelector('.branding-tab').classList.remove("is-active");
+        }
+
         function updatePageState(pageState){
             if (pageState){
 
             }else{
                 switch (location.hash){
                     case "#about":
+                        hideViewsAndResetTabs();
                         document.getElementById("about-view").style.display = "block";
-                        document.getElementById("projects-view").style.display = "none";
-                        document.getElementById("socialmedia-view").style.display = "none";
-                        document.getElementById("branding-view").style.display = "none";
                         document.querySelector('.about-tab').classList.add("is-active");
-                        document.querySelector('.projects-tab').classList.remove("is-active");
-                        document.querySelector('.socialmedia-tab').classList.remove("is-active");
-                        document.querySelector('.branding-tab').classList.remove("is-active");
+                        document.title = "Wicycool - About";
                     break;
                     case "#projects":
-                        document.getElementById("about-view").style.display = "none";
+                        hideViewsAndResetTabs();
                         document.getElementById("projects-view").style.display = "block";
-                        document.getElementById("socialmedia-view").style.display = "none";
-                        document.getElementById("branding-view").style.display = "none";
-                        document.querySelector('.about-tab').classList.remove("is-active");
                         document.querySelector('.projects-tab').classList.add("is-active");
-                        document.querySelector('.socialmedia-tab').classList.remove("is-active");
-                        document.querySelector('.branding-tab').classList.remove("is-active");
+                        document.title = "Wicycool - Projects";
                         document.querySelector(`#projects-container`).innerHTML = `
                             <div class="column">
                             </div>
@@ -245,14 +248,10 @@
                         loadProjects();
                     break;
                     case "#socialmedia":
-                        document.getElementById("about-view").style.display = "none";
-                        document.getElementById("projects-view").style.display = "none";
+                        hideViewsAndResetTabs();
                         document.getElementById("socialmedia-view").style.display = "block";
-                        document.getElementById("branding-view").style.display = "none";
-                        document.querySelector('.about-tab').classList.remove("is-active");
-                        document.querySelector('.projects-tab').classList.remove("is-active");
                         document.querySelector('.socialmedia-tab').classList.add("is-active");
-                        document.querySelector('.branding-tab').classList.remove("is-active");
+                        document.title = "Wicycool - Social Media";
                         document.querySelector(`#socialmedia-container`).innerHTML = `
                             <div class="column">
                             </div>
@@ -264,24 +263,13 @@
                         loadSocialMedia()
                     break;
                     case "#branding":
-                        document.getElementById("about-view").style.display = "none";
-                        document.getElementById("projects-view").style.display = "none";
-                        document.getElementById("socialmedia-view").style.display = "none";
+                        hideViewsAndResetTabs();
                         document.getElementById("branding-view").style.display = "block";
-                        document.querySelector('.about-tab').classList.remove("is-active");
-                        document.querySelector('.projects-tab').classList.remove("is-active");
-                        document.querySelector('.socialmedia-tab').classList.remove("is-active");
                         document.querySelector('.branding-tab').classList.add("is-active");
+                        document.title = "Wicycool - Branding";
                     break;
                     default:
-                        document.getElementById("about-view").style.display = "none";
-                        document.getElementById("projects-view").style.display = "none"; 
-                        document.getElementById("socialmedia-view").style.display = "none"; 
-                        document.getElementById("branding-view").style.display = "none";
-                        document.querySelector('.about-tab').classList.remove("is-active");
-                        document.querySelector('.projects-tab').classList.remove("is-active");
-                        document.querySelector('.socialmedia-tab').classList.remove("is-active");
-                        document.querySelector('.branding-tab').classList.remove("is-active");
+                        hideViewsAndResetTabs();
                         location.hash = "about";
                     break;
                 } 

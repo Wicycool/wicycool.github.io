@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@700&display=swap');
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #181818 !important;
+        color: white !important;
+    }
+}
+#header-space{
+    height: 80px;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    background-color: white;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Montserrat', sans-serif;
+}
+#main,.main{
+    margin: auto;
+    max-width: 800px;
+    padding: 10px;
+}
+#banner{
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+#iframe-header{
+    width: 100%;
+    height: 100px;
+    border: none;
+    position: fixed;
+    z-index: 1;
+}
+
+/* a styles */
+a:link {
+    color: deepskyblue;
+    text-decoration: none;
+}
+a:visited {
+    color: deepskyblue;
+    text-decoration: none;
+}
+a:hover {
+    color: skyblue;
+    text-decoration: underline;
+}
+a:active {
+    color: skyblue;
+    text-decoration: underline;
+}

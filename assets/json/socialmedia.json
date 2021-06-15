@@ -63,6 +63,22 @@
         "color": "#FFB50E"
     },
     {
+        "socialmedia-name": "Nintendo Switch",
+        "link": "/ql/fc",
+        "socialmedia-icon": "https://www.nintendo.com/content/dam/noa/en_US/images/switch/switch-logo.svg",
+        "username": "SW-5908-4362-2114",
+        "description": "Add me as a friend on the Nintendo Switch!",
+        "color": "#E60012"
+    },
+    {
+        "socialmedia-name": "Xbox",
+        "link": "https://account.xbox.com/en-us/profile?gamertag=Wicycool",
+        "socialmedia-icon": "/assets/images/xbox-logo.png",
+        "username": "Wicycool",
+        "description": "Add me as a friend on Xbox!",
+        "color": "green"
+    },
+    {
         "socialmedia-name": "Roblox",
         "link": "https://www.roblox.com/users/63683267/profile",
         "socialmedia-icon": "https://upload.wikimedia.org/wikipedia/commons/4/48/Roblox_Player_icon.png",
