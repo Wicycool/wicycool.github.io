@@ -5,7 +5,7 @@
             "type": "artwork",
             "description": "Logos and channel artwork that I created for Kevintendo for his 2020 rebranding.",
             "link": "https://drive.google.com/drive/u/0/folders/1SVj5UWJxDDHy42JKQ_eCZ6QhLabyNZ32",
-            "thumbnail": "../assets/images/k10-2020-branding.png",
+            "thumbnail": "/assets/images/k10-2020-branding.png",
             "thumbnail-aspect": "4by3"
         },
         {
@@ -61,8 +61,16 @@
             "type": "video-series",
             "description": "All of the livestreams I have done.",
             "link": "https://www.youtube.com/playlist?list=PLQ7FZ3d0mAl7TSChtAbEqPjQ8UzAYb4Ks",
-            "thumbnail": "../assets/images/ezstream.jpg",
+            "thumbnail": "/assets/images/ezstream.jpg",
             "thumbnail-aspect": "16by9"
+        },
+        {
+            "name": "Wicycool branding",
+            "type": "artwork",
+            "description": "The branding that I've made for myself!",
+            "link": "/stuff/#branding",
+            "thumbnail": "/assets/images/branding.png",
+            "thumbnail-aspect": "4by3"
         }
     ],
     "types": {
@@ -84,7 +92,7 @@
         },
         "artwork": {
             "name": "Artwork",
-            "icon": "../assets/images/brush-white-24dp.svg"
+            "icon": "/assets/images/brush-white-24dp.svg"
         }
     }
 }
