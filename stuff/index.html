@@ -18,7 +18,7 @@
     <section class="section fadein">
         <div class="container is-widescreen has-text-left">
             <p class="title is-5"><a class="" href="../"><span class="material-icons" style="vertical-align: middle;">arrow_back</span> <span style="vertical-align: middle;">Back to homepage</span></a></p>
-            <div class="tabs">
+            <div class="tabs" style="display: none">
                 <ul>
                     <li class="about-tab"><a href="#about">About</a></li>
                     <li class="projects-tab"><a href="#projects">Projects</a></li>
@@ -94,6 +94,7 @@
                     </div>
                 </div>
             </div>
+            <noscript><br><hr><br></noscript>
             <div id="branding-view">
                 <h1 class="title is-2">Wicycool Branding</h1>
                 <h1 class="subtitle is-5">The official branding for Wicycool-related things!</h1>
@@ -109,6 +110,7 @@
     </section>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
+        document.querySelector(".tabs").style.display = "";
         var sanitizeHTML = function (str) {
             return str.replace(/[^\w. ]/gi, function (c) {
                 return '&#' + c.charCodeAt(0) + ';';
