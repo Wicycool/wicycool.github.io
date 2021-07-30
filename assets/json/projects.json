@@ -1,6 +1,22 @@
 {
     "projects": [
         {
+            "name": "JUMP BOOST",
+            "type": "scratch",
+            "description": "An addicting infinite platformer that I made! Jump on the platforms and boost off of them to get as high up as you can!",
+            "link": "https://scratch.mit.edu/projects/556252196/",
+            "thumbnail": "https://cdn2.scratch.mit.edu/get_image/project/556252196_480x360.png",
+            "thumbnail-aspect": "4by3"
+        },
+        {
+            "name": "DON'T CLICK THE CIRCLE",
+            "type": "scratch",
+            "description": "DO NOT CLICK THE CIRCLE. Whatever you do, do not go into this project and click the circle. Doing so can be very dangerous.",
+            "link": "https://scratch.mit.edu/projects/556124648/",
+            "thumbnail": "https://cdn2.scratch.mit.edu/get_image/project/556124648_480x360.png",
+            "thumbnail-aspect": "4by3"
+        },
+        {
             "name": "Kevintendo 2020 Branding",
             "type": "artwork",
             "description": "Logos and channel artwork that I created for Kevintendo for his 2020 rebranding.",
@@ -14,6 +30,14 @@
             "description": "A multiplayer version of Griffpatch's Scratch recreation of Getting Over It.",
             "link": "https://scratch.mit.edu/projects/396122003/",
             "thumbnail": "https://cdn2.scratch.mit.edu/get_image/project/396122003_480x360.png",
+            "thumbnail-aspect": "4by3"
+        },
+        {
+            "name": "Wicycool branding",
+            "type": "artwork",
+            "description": "The branding that I've made for myself!",
+            "link": "/stuff/#branding",
+            "thumbnail": "/assets/images/branding.png",
             "thumbnail-aspect": "4by3"
         },
         {
@@ -63,14 +87,6 @@
             "link": "https://www.youtube.com/playlist?list=PLQ7FZ3d0mAl7TSChtAbEqPjQ8UzAYb4Ks",
             "thumbnail": "/assets/images/ezstream.jpg",
             "thumbnail-aspect": "16by9"
-        },
-        {
-            "name": "Wicycool branding",
-            "type": "artwork",
-            "description": "The branding that I've made for myself!",
-            "link": "/stuff/#branding",
-            "thumbnail": "/assets/images/branding.png",
-            "thumbnail-aspect": "4by3"
         }
     ],
     "types": {
