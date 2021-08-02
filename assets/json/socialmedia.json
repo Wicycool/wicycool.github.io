@@ -125,5 +125,13 @@
         "username": "@Wicycool",
         "description": "I don't use Instagram.",
         "color": "#AD34AF"
+    },
+    {
+        "socialmedia-name": "Mastodon",
+        "link": "https://mastodon.online/@Wicycool",
+        "socialmedia-icon": "https://joinmastodon.org/static/media/logo_transparent_white.6a441138.svg",
+        "username": "@Wicycool@mastodon.online",
+        "description": "I don't use Mastodon.",
+        "color": "#3088D4"
     }
 ]
