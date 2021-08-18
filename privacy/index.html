@@ -26,10 +26,12 @@
                         <br>
                         <p>If you need to contact me for some reason, please use my email:</p>
                         <br>
-                        <p>
-                            <code>
-                                wicycool (@ at) gmail (. dot) com
-                            </code>
+                        <p id="meow">
+                            <a>
+                                <code>
+                                    Please enable JavaScript to see my email address. (it keeps those pesky bots out!)
+                                </code>
+                            </a>
                         </p>
                         <br>
                         <p>(Business purposes/impotant things only please!)</p>
@@ -44,6 +46,7 @@
                         <h1 class="title is2-">Source Code</h1>
                         <p>This website's source code can be found <a href="https://github.com/Wicycool/wicycool.github.io">on GitHub</a>, and is licensed under the <a href="https://github.com/Wicycool/wicycool.github.io/blob/main/LICENSE">GNU General Public License v3.0</a>.</p>
                         <br>
+                        <p>Website version: 1.1.0</p>
                         <div id="last-updated" style="display: none">
                             <span></span>
                             <a></a>
@@ -61,6 +64,15 @@
             document.querySelector("#last-updated span").innerText = `Website last updated: `;
             document.querySelector("#last-updated a").innerText = new Date(response.data[0]["commit"]["author"]["date"]);
             document.querySelector("#last-updated a").href = response.data[0]["html_url"];
+        }).catch(function(error){
+            console.log(error);
+        });
+    </script>
+    <script>
+        axios.get("/assets/json/" + "meow.json")
+        .then(function(response){
+            document.querySelector("#meow code").innerText = `${response.data.name}@${response.data.secondlevel}.${response.data.toplevel}`;
+            document.querySelector("#meow a").href = `mailto:${response.data.name}@${response.data.secondlevel}.${response.data.toplevel}`;
         }).catch(function(error){
             console.log(error);
         });

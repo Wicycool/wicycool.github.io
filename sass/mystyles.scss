@@ -24,6 +24,11 @@ $subtitle-family: 'Montserrat', sans-serif;
 @import "../node_modules/bulma/bulma.sass";
 
 $pixelbackground: url('/assets/images/background.webp');
+$pixelbackgroundblurred: url('/assets/images/background%20blurred.webp');
+
+:root {
+  color-scheme: dark;
+}
 
 .tabs{
     font-family: $title-family;
@@ -166,10 +171,10 @@ hr{
     }
     #logo-window{
         border-radius: 1em;
-        background: $pixelbackground center;
+        background: $pixelbackgroundblurred center;
         background-size: cover;
         background-attachment: fixed;
-        box-shadow: 0 5px 10px 0px rgba(0, 0, 0, .2);
+        box-shadow: 0 10px 20px 0px rgba(0, 0, 0, .2);
     }
     #windowblind{
         top: 0%;
@@ -179,8 +184,9 @@ hr{
         display: none;
         .hero-body{
             text-align: center !important;
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), $pixelbackground center;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), $pixelbackgroundblurred center;
             background-size: cover;
+            background-attachment: scroll;
         }
     }
 }

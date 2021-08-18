@@ -7762,6 +7762,12 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem; }
 
+:root {
+  color-scheme: dark; }
+
+body {
+  scrollbar-color: dark; }
+
 .tabs {
   font-family: "Montserrat", sans-serif; }
 
@@ -7894,10 +7900,10 @@ hr {
 
 #homepage #logo-window {
   border-radius: 1em;
-  background: url("/assets/images/background.webp") center;
+  background: url("/assets/images/background%20blurred.webp") center;
   background-size: cover;
   background-attachment: fixed;
-  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.2); }
 
 #homepage #windowblind {
   top: 0%;
@@ -7907,5 +7913,6 @@ hr {
   display: none; }
   #homepage #windowblind .hero-body {
     text-align: center !important;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url("/assets/images/background.webp") center;
-    background-size: cover; }
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url("/assets/images/background%20blurred.webp") center;
+    background-size: cover;
+    background-attachment: scroll; }

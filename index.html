@@ -25,15 +25,6 @@
                 </div>
                 <hr>
                 <div class="has-text-white">
-                    <article class="message is-primary" style="max-width: 768px;">
-                        <div class="message-header">
-                            <p>Ezlambry is now Wicycool</p>
-                        </div>
-                        <div class="message-body">
-                            You might have noticed that I've rebranded and I'm now called Wicycool!<br>
-                            You can watch my video all about my rebranding <a href="https://www.youtube.com/watch?v=r2v0HmLVQ1E">here</a>.
-                        </div>
-                    </article>
                     <div class="block">
                         <p class="title is-3"><a href="stuff/#about" class="has-text-white link">About</a></p>
                         <p class="title is-3"><a href="stuff/#projects" class="has-text-white link">Projects</a></p>
@@ -48,6 +39,7 @@
                     <p class="subtitle is-6"><a href="privacy/" class="has-text-white link">Privacy and Licenses</a></p>
                 </div>
             </div>
+            <span style="font-size: 0;" class="material-icons">info</span> <!--This loads in the font!-->   
         </div>
     </section>
     <section id="windowblind" class="hero is-fullheight">
@@ -69,7 +61,7 @@
         var backwardSelection = new Audio('assets/sound/wav/03/navigation_backward-selection.wav');
         var openSite = new Audio('assets/sound/wav/03/navigation_selection-complete-celebration.wav');
         var hoverSound = new Audio('assets/sound/wav/03/navigation_hover-tap.wav');
-        if (document.referrer.split('/')[2] != location.host) {
+        if (document.referrer.split('/')[2] != location.host && location.hash != "#nowindowblind") {
             //came from different non-Wicycool website
             document.querySelector("#main-wrapper").style.opacity = "0";
             document.querySelector("#windowblind").style.display= "flex";
@@ -106,8 +98,15 @@
             "Minecraft-like splashes!",
             "I should've used React to make this website...",
             "WC stands for Wicycool. Nothing else. Nothing toilet related.",
-            "epic gamer moment"
-        ][Math.floor(Math.random()*13)]
+            "epic gamer moment",
+            "among us sussy imposter moment!!",
+            "Welcome to my epic website 😎",
+            "Hi I'm Wicycool and I'm super cool.",
+            "ʰᵉˡˡᵒ",
+            "Check out The Owl House!",
+            "Hosted with GitHub Pages!",
+            "you should never be able to see this message"
+        ][Math.floor(Math.random()*18)]
         //creates links
         var links = document.getElementsByClassName("link");
         for (var i = 0; i < links.length; i++) {
