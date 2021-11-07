@@ -10,7 +10,7 @@
     {
         "socialmedia-name": "Twitter",
         "link": "https://twitter.com/Wicycool",
-        "socialmedia-icon": "https://abs.twimg.com/responsive-web/client-web/icon-ios.b1fc7275.png",
+        "socialmedia-icon": "/assets/images/social-media/twitter-logo.svg",
         "username": "@Wicycool",
         "description": "Get Tweets from Wicycool here!",
         "color": "#1DA1F2"
@@ -33,7 +33,7 @@
     {
         "socialmedia-name": "Discord",
         "link": "https://discord.gg/SFtZAz3",
-        "socialmedia-icon": "https://discord.com/assets/1c8a54f25d101bdc607cec7228247a9a.svg",
+        "socialmedia-icon": "/assets/images/social-media/discord-logo.svg",
         "username": "discord.gg/SFtZAz3",
         "description": "Talk with other people about Wicycool-related things in the Discord server!",
         "color": "#7289DA"
@@ -73,7 +73,7 @@
     {
         "socialmedia-name": "Xbox",
         "link": "https://account.xbox.com/en-us/profile?gamertag=Wicycool",
-        "socialmedia-icon": "/assets/images/xbox-logo.png",
+        "socialmedia-icon": "/assets/images/social-media/xbox-logo.png",
         "username": "Wicycool",
         "description": "Add me as a friend on Xbox!",
         "color": "green"
@@ -105,7 +105,7 @@
     {
         "socialmedia-name": "TikTok",
         "link": "https://tiktok.com/@Wicycool",
-        "socialmedia-icon": "/assets/images/tiktok-logo.png",
+        "socialmedia-icon": "/assets/images/social-media/tiktok-logo.png",
         "username": "@Wicycool",
         "description": "I don't use TikTok.",
         "color": "#EF2950"
@@ -121,7 +121,7 @@
     {
         "socialmedia-name": "Instagram",
         "link": "https://www.instagram.com/wicycool/",
-        "socialmedia-icon": "https://www.instagram.com/favicon.ico",
+        "socialmedia-icon": "/assets/images/social-media/instagram-logo.png",
         "username": "@Wicycool",
         "description": "I don't use Instagram.",
         "color": "#AD34AF"
