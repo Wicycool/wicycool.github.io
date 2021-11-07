@@ -204,3 +204,17 @@ hr{
     border-bottom-width: 1px;
     border-style: solid;
 }
+
+.tab-background{
+    position: fixed;
+    left: 0; 
+    right: 0; 
+    top: 0; 
+    z-index: 1;
+    background-color: rgba(0,0,0,.9);
+    @supports (backdrop-filter: blur(8px)){
+        background-color: rgba(0,0,0,0.75);
+        backdrop-filter: blur(8px);
+        text-shadow: rgba(0,0,0,1) 0 0 10px;
+    }
+}

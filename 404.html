@@ -23,13 +23,16 @@
         </div>
     </section>
     <script>
-        document.getElementById('splash').innerText = 
+        var splashoptions = 
         [
             "There's nothing here...",
             "I literally have no idea where you were trying to go.",
             "What is this place??",
-            "(nothingness)"
-        ][Math.floor(Math.random()*4)]
+            "(nothingness)",
+            "WicycoolNotFound",
+            "No wicys or cools were found."
+        ]
+        document.getElementById('splash').innerText = splashoptions[Math.floor(Math.random()*splashoptions.length)]
     </script>
 </body>
 </html>

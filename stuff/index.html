@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <div style="position: fixed;  left: 0; right: 0; top: 0; z-index: 1;background-color: rgba(0,0,0,0.75); backdrop-filter: blur(8px); text-shadow: rgba(0,0,0,1) 0 0 10px;">
+    <div class="tab-background">
         <section class="section fadein" style="padding-bottom: 0;">
             <div class="container is-widescreen has-text-left" style="margin-bottom: 24px; margin-bottom: 0;">
                 <p class="title is-5"><a class="" href="../"><span class="material-icons" style="vertical-align: middle;">arrow_back</span> <span style="vertical-align: middle;">Back to homepage</span></a></p>
@@ -45,33 +45,73 @@
                 <br>
             </noscript>
             <div id="about-view">
-                <div class="columns">
+                <h1 class="title is-2">About</h1>
+                <div class="columns" style="display: flex;">
                     <div class="column is-two-thirds">
-                        <h1 class="title is-2">About Wicycool</h1>
-
-                        <p>Hey! I’m Wicycool. I make stuff sometimes.</p>
-                        <p>My pronouns are they/them and he/him and I live in the United States.</p>
-                        <p>I’ve made videos, live streams, branding, Scratch projects, and some other coding-based projects as well.</p>
-                        <br>
-                        <h1 class="title is-2">Q&A</h1>
-
-                        <h1 class="title is-4">What are your PC specs?</h1>
-                        <p>I use an HP OMEN 15-dc0051nr laptop, with an Intel Core i7-8750H, NVIDIA GeForce GTX 1060 6GB, and 16GB RAM.</p>
-                        <br>
-                        <h1 class="title is-4">What do you use to make your videos?</h1>
-                        <p>I use Vegas Pro 17 Edit and Kdenlive to edit, a Logitech Rock Band USB Microphone, an Elgato HD60s to record console
-                        footage, GIMP to make thumbnails and branding, Adobe Animate to make animations, and I use OBS Studio to stream and record PC footage.</p>
-                        <br>
-                        <h1 class="title is-4">What things have you made?</h1>
-                        <p>You can find some of the projects that I have made at my projects page <a href="#projects">here</a>.</p>
-                        <br>
-                        <h1 class="title is-4">What social media accounts do you have?</h1>
-                        <p>You can find my list of social media accounts <a href="#socialmedia">here</a>.</p>
-                        <br>
-                        <h1 class="title is-4">Are you awesome?</h1>
-                        <p>Maybe. ;)</p>
+                        <div class="columns">
+                            <div class="column">
+                                <div class="card">
+                                    <div class="card-content">
+                                        <h1 class="title is-3">Hey! I'm Wicycool. I make stuff sometimes.</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column is-two-thirds">
+                                <div class="card">
+                                    <div class="card-content">
+                                        <h1 class="title is-3">Pronouns</h1>
+                                        <p>I prefer they/them, but you can also use he/him.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column is-one-third">
+                                <div class="card">
+                                    <div class="card-content">
+                                        <h1 class="title is-3">Country</h1>
+                                        <p>I live in the United States.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column">
+                                <div class="card">
+                                    <div class="card-content">
+                                        <h1 class="title is-3">Stuff I do</h1>
+                                        <p>I do a lot of things, but in the past I’ve made videos, live streams, branding, Scratch projects, and some other coding-based projects as well.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column is-one-third">
+                                <div class="card">
+                                    <div class="card-content">
+                                        <h1 class="title is-3">PC Specs</h1>
+                                        <p>I use an HP OMEN 15-dc0051nr laptop, with an Intel Core i7-8750H, NVIDIA GeForce GTX 1060 6GB, and 16GB RAM.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column is-two-thirds">
+                                <div class="card">
+                                    <div class="card-content">
+                                        <h1 class="title is-3">Things I use to make content</h1>
+                                        <p>I use Vegas Pro 17 Edit and Kdenlive to edit, a Logitech Rock Band USB Microphone, an Elgato HD60s to record console footage, GIMP to make thumbnails and branding, Adobe Animate to make animations, and I use OBS Studio to stream and record PC footage.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-one-third">
+                        <div class="card" style="background-color: red;">
+                            <div class="card-content">[[TEMPORARY]]<br><br> I WANT TO MAKE THIS USE BULMA TILES INSTEAD OF COLUMNS SO ITS EASIER TO PUT A FULL HEIGHT IMAGE HERE 
+                            </div>
+                        </div>
                     </div>
                 </div>
+                
             </div>
             <noscript><br><hr><br></noscript>
             <div id="projects-view">
@@ -103,7 +143,7 @@
             </div>
             <noscript><br><hr><br></noscript>
             <div id="branding-view">
-                <h1 class="title is-2">Wicycool Branding</h1>
+                <h1 class="title is-2">Branding</h1>
                 <h1 class="subtitle is-5">The official branding for Wicycool-related things!</h1>
                 <a href="/assets/Wicycool-Branding.zip">
                     <p class="is-size-4 is-family-secondary"><span class="material-icons is-size-4" style="vertical-align: middle;">file_download</span> Download .zip</p>
@@ -129,7 +169,7 @@
             axios.get("../assets/json/projects.json")
             .then(function(response){
                 document.querySelector("#projects-view .loading-indicator").style.display = "none";
-                var fadeInSound = new Audio('../assets/sound/wav/03/custom_fadein.wav');
+                var fadeInSound = new Audio('../assets/sound/wav/03/custom_fadein_2.wav');
                 for (let i = 0; i < response.data.projects.length; i++){
                     if (response.data.types[response.data.projects[i]["type"]] != null){
                         typeName = response.data.types[response.data.projects[i]["type"]]["name"];
@@ -183,7 +223,7 @@
             axios.get("../assets/json/socialmedia.json")
             .then(function(response){
                 document.querySelector("#socialmedia-view .loading-indicator").style.display = "none";
-                var fadeInSound = new Audio('../assets/sound/wav/03/custom_fadein.wav');
+                var fadeInSound = new Audio('../assets/sound/wav/03/custom_fadein_2.wav');
                 for (let i = 0; i < response.data.length; i++){
                     if (response.data[i]["link"].includes("javascript:")){
                         throw "XSS attempt";

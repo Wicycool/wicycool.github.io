@@ -63,6 +63,7 @@
         var hoverSound = new Audio('assets/sound/wav/03/navigation_hover-tap.wav');
         if (document.referrer.split('/')[2] != location.host && location.hash != "#nowindowblind") {
             //came from different non-Wicycool website
+            /*
             document.querySelector("#main-wrapper").style.opacity = "0";
             document.querySelector("#windowblind").style.display= "flex";
             document.querySelector("#windowblind").addEventListener('click', function () {
@@ -76,6 +77,10 @@
                 transitionRight.play();
                 openSite.play();
             });
+            */
+            document.querySelector("#main-wrapper").style.opacity = "1";
+            document.querySelector("#main-wrapper").style.animationName = "fadein";
+            document.querySelector("#main").style.animationName = "zoomin";
         } else if(!(window.performance.navigation.type == 1)) {
             //came from Wicycool website
             backwardSelection.play();
