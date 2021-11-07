@@ -174,7 +174,12 @@ hr{
         background: $pixelbackgroundblurred center;
         background-size: cover;
         background-attachment: fixed;
-        box-shadow: 0 10px 20px 0px rgba(0, 0, 0, .2);
+        box-shadow: 0 10px 20px 0px rgba(12, 11, 11, 0.2);
+        @supports ( -moz-appearance:none ){
+            background: $pixelbackgroundblurred left;
+            background-size: 1920px;
+            background-attachment: local;
+        }
     }
     #windowblind{
         top: 0%;
@@ -189,4 +194,13 @@ hr{
             background-attachment: scroll;
         }
     }
+}
+.has-shading, .is-shading{
+    border-top-color: rgba(255,255,255,0.2);
+    border-bottom-color: rgba(0,0,0,0.2);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-style: solid;
 }

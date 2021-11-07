@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="utf-8">
@@ -15,7 +15,7 @@
         <div id="main-wrapper" class="hero-body">
             <div id="main" class="container is-widescreen has-text-left">
                 <section class="hero" style="max-width: 768px;">
-                    <div id="logo-window" class="hero-body">
+                    <div id="logo-window" class="hero-body has-shading">
                         <img src="assets/images/full logo white.png" alt="Wicycool logo" style="width: 300px; min-width: 10px; vertical-align: middle;">
                     </div>
                 </section>
@@ -83,7 +83,7 @@
             document.querySelector("#main").style.animationName = "slideright";
         }
         //splash text
-        document.getElementById('splash').innerText = 
+        var splashoptions = 
         [
             "I make stuff sometimes.",
             "I make random videos about random things.",
@@ -105,8 +105,10 @@
             "ʰᵉˡˡᵒ",
             "Check out The Owl House!",
             "Hosted with GitHub Pages!",
+            "",
             "you should never be able to see this message"
-        ][Math.floor(Math.random()*18)]
+        ] 
+        document.getElementById('splash').innerText = splashoptions[Math.floor(Math.random()*(splashoptions.length - 1))]
         //creates links
         var links = document.getElementsByClassName("link");
         for (var i = 0; i < links.length; i++) {
