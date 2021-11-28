@@ -7972,9 +7972,6 @@ hr {
 #main-wrapper {
   animation-duration: 0.25s; }
 
-#windowblind {
-  animation-duration: 0.5s; }
-
 #homepage #main {
   max-width: 1280px; }
 
@@ -7994,18 +7991,6 @@ hr {
       background: url("/assets/images/background%20blurred.webp") left;
       background-size: 1920px;
       background-attachment: local; } }
-
-#homepage #windowblind {
-  top: 0%;
-  left: 0;
-  right: 0;
-  position: fixed;
-  display: none; }
-  #homepage #windowblind .hero-body {
-    text-align: center !important;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url("/assets/images/background%20blurred.webp") center;
-    background-size: cover;
-    background-attachment: scroll; }
 
 .has-shading, .is-shading {
   border-top-color: rgba(255, 255, 255, 0.2);

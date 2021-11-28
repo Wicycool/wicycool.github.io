@@ -48,18 +48,6 @@
             <span style="font-size: 0;" class="material-icons">info</span> <!--This loads in the font!-->   
         </div>
     </section>
-    <section id="windowblind" class="hero is-fullheight">
-        <div class="hero-body">
-            <div class="container is-widescreen" style="max-width: 1280px;">
-                    <img src="assets/images/circle logo.png" style="max-width: 300px;" alt="Wicycool Circle Logo">
-                    <br><br>
-                    <p class="title is-3">Welcome to my website!</p>
-                    <p class="title is-5">Click the button below to see what's here!</p>
-                    <button class="button large is-primary is-large is-family-secondary" style="width: 300px">Open website</button>
-                    <br><br><p class="subtitle is-6" style="opacity: 0.5;">(sound on!)</p>
-            </div>
-        </div>
-    </section>
     <script>
         var transitionLeft = new Audio('assets/sound/wav/04/navigation_transition-left.wav');
         var transitionRight = new Audio('assets/sound/wav/04/navigation_transition-right.wav');
@@ -67,23 +55,8 @@
         var backwardSelection = new Audio('assets/sound/wav/03/navigation_backward-selection.wav');
         var openSite = new Audio('assets/sound/wav/03/navigation_selection-complete-celebration.wav');
         var hoverSound = new Audio('assets/sound/wav/03/navigation_hover-tap.wav');
-        if (document.referrer.split('/')[2] != location.host && location.hash != "#nowindowblind") {
+        if (document.referrer.split('/')[2] != location.host) {
             //came from different non-Wicycool website
-            /*
-            document.querySelector("#main-wrapper").style.opacity = "0";
-            document.querySelector("#windowblind").style.display= "flex";
-            document.querySelector("#windowblind").addEventListener('click', function () {
-                document.querySelector("#windowblind").style.animationName = "slideup";
-                document.querySelector("#main-wrapper").style.opacity = "1";
-                document.querySelector("#main-wrapper").style.animationName = "fadein";
-                document.querySelector("#main").style.animationName = "zoomin";
-                setTimeout(function () {
-                    document.querySelector("#windowblind").style.display = "none";
-                }, 250);
-                transitionRight.play();
-                openSite.play();
-            });
-            */
             document.querySelector("#main-wrapper").style.opacity = "1";
             document.querySelector("#main-wrapper").style.animationName = "fadein";
             document.querySelector("#main").style.animationName = "zoomin";
