@@ -13,6 +13,8 @@ $border: rgba(255,255,255,0.25);
 $hr-background-color: rgba(255,255,255,0.25);
 $card-background-color: rgb(29, 29, 29);
 $card-header-shadow: 0 0.125em 0.25em rgba(0,0,0,0.5);
+$box-background-color: rgb(29, 29, 29);
+$box-shadow: 0 0.125em 0.25em rgba(0,0,0,0.5);
 $code: $awesomeblue;
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@700&family=Montserrat:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
@@ -25,6 +27,8 @@ $subtitle-family: 'Montserrat', sans-serif;
 
 $pixelbackground: url('/assets/images/background.webp');
 $pixelbackgroundblurred: url('/assets/images/background%20blurred.webp');
+
+
 
 :root {
   color-scheme: dark;

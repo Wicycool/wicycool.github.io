@@ -8,6 +8,12 @@
     <title>Wicycool</title>
     <link rel="stylesheet" href="/assets/css/mystyles.css">
     <link rel="stylesheet" href="/assets/css/home.css">
+    <style>
+        @font-face {
+            font-family: 'Determination Mono';
+            src: url('/assets/fonts/determinationmono.ttf') format('truetype');
+        }
+    </style>
 </head>
 
 <body id="homepage">
@@ -90,6 +96,7 @@
         //splash text
         var splashoptions = 
         [
+            "* ONLY A [[BIG SHOT]] WOULD HAVE [[Look at this: Brand new website?]]!1!",
             "I make stuff sometimes.",
             "I make random videos about random things.",
             "I'm bad at coding.",
@@ -110,10 +117,17 @@
             "ʰᵉˡˡᵒ",
             "Check out The Owl House!",
             "Hosted with GitHub Pages!",
-            "",
             "you should never be able to see this message"
         ] 
         document.getElementById('splash').innerText = splashoptions[Math.floor(Math.random()*(splashoptions.length - 1))]
+        if (document.getElementById('splash').innerText == splashoptions[0]) {
+            document.getElementById('splash').style.fontFamily = "Determination Mono, 'Montserrat', sans-serif"
+            document.getElementById('splash').style.fontSize = "24px"
+            document.getElementById('splash').onclick = function(){
+                location.href = "/hyperlink-blocked.html"
+            }
+            document.getElementById('splash').style.cursor = "pointer";
+        }
         //creates links
         var links = document.getElementsByClassName("link");
         for (var i = 0; i < links.length; i++) {
