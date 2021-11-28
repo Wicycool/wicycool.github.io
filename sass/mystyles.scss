@@ -13,6 +13,8 @@ $border: rgba(255,255,255,0.25);
 $hr-background-color: rgba(255,255,255,0.25);
 $card-background-color: rgb(29, 29, 29);
 $card-header-shadow: 0 0.125em 0.25em rgba(0,0,0,0.5);
+$box-background-color: rgb(29, 29, 29);
+$box-shadow: 0 0.125em 0.25em rgba(0,0,0,0.5);
 $code: $awesomeblue;
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@700&family=Montserrat:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
@@ -25,6 +27,8 @@ $subtitle-family: 'Montserrat', sans-serif;
 
 $pixelbackground: url('/assets/images/background.webp');
 $pixelbackgroundblurred: url('/assets/images/background%20blurred.webp');
+
+
 
 :root {
   color-scheme: dark;
@@ -156,9 +160,6 @@ hr{
 #main-wrapper{
     animation-duration: 0.25s;
 }
-#windowblind{
-    animation-duration: 0.5s;
-}
 
 #homepage{
     #main{
@@ -174,19 +175,34 @@ hr{
         background: $pixelbackgroundblurred center;
         background-size: cover;
         background-attachment: fixed;
-        box-shadow: 0 10px 20px 0px rgba(0, 0, 0, .2);
-    }
-    #windowblind{
-        top: 0%;
-        left: 0;
-        right: 0;
-        position: fixed;
-        display: none;
-        .hero-body{
-            text-align: center !important;
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), $pixelbackgroundblurred center;
-            background-size: cover;
-            background-attachment: scroll;
+        box-shadow: 0 10px 20px 0px rgba(12, 11, 11, 0.2);
+        @supports ( -moz-appearance:none ){
+            background: $pixelbackgroundblurred left;
+            background-size: 1920px;
+            background-attachment: local;
         }
+    }
+}
+.has-shading, .is-shading{
+    border-top-color: rgba(255,255,255,0.2);
+    border-bottom-color: rgba(0,0,0,0.2);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-style: solid;
+}
+
+.tab-background{
+    position: fixed;
+    left: 0; 
+    right: 0; 
+    top: 0; 
+    z-index: 1;
+    background-color: rgba(0,0,0,.9);
+    @supports (backdrop-filter: blur(8px)){
+        background-color: rgba(0,0,0,0.75);
+        backdrop-filter: blur(8px);
+        text-shadow: rgba(0,0,0,1) 0 0 10px;
     }
 }

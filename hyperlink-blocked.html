@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>[[Hyperlink Blocked]]</title>
+        <style>
+            @font-face {
+                font-family: 'Determination Mono';
+                src: url('/assets/fonts/determinationmono.ttf') format('truetype');
+            }
+            body{
+                font-family: 'Determination Mono', monospace;
+                font-size: 2em;
+                background-color: black;
+                color: white;
+            }
+            a{
+                color: yellow;
+            }
+            a::before{
+                content: "";
+                opacity: 0;
+                padding-left: 0;
+                transition: padding-left 0.1s, opacity 0.1s;
+            }
+            a:hover::before{
+                content: "";
+                opacity: 1;
+                padding-left: 24px;
+                background-image: url("assets/hyperlink-blocked/spr_heart/0.png");
+                image-rendering: pixelated; 
+                background-repeat: no-repeat;
+                background-position: 0px 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <!---->
+        <noscript>
+            * JAVASCRIPT IS [[Required]] TO [[Having interactions?]] WITH THIS WEBSITE!<br>
+            * ENABLE IT, YOU LITTLE [[Weakling!]]<br>
+            * THEN I'LL SHOW YOU MY<br>
+            * THEN I'LL SHOW YOU MY<br>
+            * [[Hyperlink Blocked]]
+        </noscript>
+            <span class="dialogue"></span><br>
+            <a class="nextbutton" href="javascript:void(0);">Proceed Anyways</a>
+        <script>
+            var DIALOGUES = [
+                "* THIS WEBSITE HAS BEEN [[Hyperlink Blocked]]",
+                "* YOU [Little Sponge]! THiS WEBSITE IS [[Under Constructin]]!\n* GO PLAY [Minecrap] OR SOMETHING!!!"
+            ]
+
+            var currentDialogue = 0;
+
+            var nextButton = document.querySelector(".nextbutton")
+            nextButton.onclick = function(){
+                menuSelect.currentTime = 0;
+                menuSelect.play();
+                currentDialogue++
+                dialogue(DIALOGUES[currentDialogue])
+                nextButton.style.display = "none"
+                if (currentDialogue == 0 ) {
+                    nextButton.innerText = "Proceed Anyways"
+                } else if (currentDialogue == 2) {
+                    currentDialogue--;
+                    window.location = "https://minecraft.net"
+                } else {
+                    nextButton.innerText = "Play Minecrap"
+                }
+
+                if (currentDialogue == 1 ){
+                    introMusic.pause()
+                    meetingMusic.play()
+                }
+            }
+
+            var introMusic = new Audio('/assets/hyperlink-blocked/spamton_meeting_intro.ogg');
+            introMusic.loop = true;
+            introMusic.play();
+
+            var meetingMusic = new Audio('/assets/hyperlink-blocked/spamton_meeting.ogg')
+            meetingMusic.loop = true;
+
+            var spamtonDialogue = new Audio('/assets/hyperlink-blocked/spamton_speaking.wav');
+            var menuMove = new Audio('/assets/hyperlink-blocked/snd_menumove.wav');
+            var menuSelect = new Audio('/assets/hyperlink-blocked/snd_select.wav');
+            
+            nextButton.addEventListener("mouseover",function(){
+                menuMove.currentTime = 0;
+                menuMove.play();
+            })
+
+            function dialogue(text){
+                nextButton.style.display = "none"
+                let dial = document.querySelector(".dialogue")
+                let i = 0;
+                let dialogueprinted = "";
+                let interval = setInterval(function(){
+                    if (i >= text.length) {
+                        clearInterval(interval);
+                        if (true/*currentDialogue+1 != DIALOGUES.length*/){
+                            nextButton.style.display = "initial"    
+                        }
+                    } else {
+                        dialogueprinted += text[i]
+                        dial.innerText = dialogueprinted
+                        if (i%2 == 1)
+                        if (text[i] != " ") spamtonDialogue.cloneNode().play();
+                    }
+                    i++;
+                    console.log(i)
+                }, 1000/30)
+            }
+
+            dialogue(DIALOGUES[currentDialogue])
+        </script>
+    </body>
+</html>

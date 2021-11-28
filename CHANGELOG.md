@@ -4,6 +4,26 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] - 2021-11-27
+### Added
+- Added a cool new shading effect on the logo window and buttons
+- Added more splashes on 404 page
+- Added new and improved About page with FAQ section
+- Added an awesome work-in-progress easter egg ;)
+
+### Removed
+- Removed the windowblind on the homepage because it was ugly, annoying, and unnecessary.
+
+### Fixed
+- Fixed logo window's background on homepage acting strange with transforms on Firefox
+- Improved compatability for browsers that don't support backdrop-filter like Firefox
+- Fixed Node modules so "npm install" should now work
+- Fixed some of the social media logos not loading
+
+### Changed
+- Improved some of the text in Privacy page
+- Clarified some things in README.md
+
 ## [1.1.0] - 2021-07-18
 ### Added
 - More splashes
@@ -27,5 +47,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.0] - 2021-07-18
 
+[1.2.0]: https://github.com/Wicycool/wicycool.github.io/releases/tag/v1.2.0
 [1.1.0]: https://github.com/Wicycool/wicycool.github.io/releases/tag/v1.1.0
 [1.0.0]: https://github.com/Wicycool/wicycool.github.io/releases/tag/v1.0.0
