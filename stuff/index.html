@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <div style="position: fixed;  left: 0; right: 0; top: 0; z-index: 1;background-color: rgba(0,0,0,0.75); backdrop-filter: blur(8px); text-shadow: rgba(0,0,0,1) 0 0 10px;">
+    <div class="tab-background">
         <section class="section fadein" style="padding-bottom: 0;">
             <div class="container is-widescreen has-text-left" style="margin-bottom: 24px; margin-bottom: 0;">
                 <p class="title is-5"><a class="" href="../"><span class="material-icons" style="vertical-align: middle;">arrow_back</span> <span style="vertical-align: middle;">Back to homepage</span></a></p>
@@ -139,7 +139,7 @@
             </div>
             <noscript><br><hr><br></noscript>
             <div id="branding-view">
-                <h1 class="title is-2">Wicycool Branding</h1>
+                <h1 class="title is-2">Branding</h1>
                 <h1 class="subtitle is-5">The official branding for Wicycool-related things!</h1>
                 <a href="/assets/Wicycool-Branding.zip">
                     <p class="is-size-4 is-family-secondary"><span class="material-icons is-size-4" style="vertical-align: middle;">file_download</span> Download .zip</p>
@@ -165,7 +165,7 @@
             axios.get("../assets/json/projects.json")
             .then(function(response){
                 document.querySelector("#projects-view .loading-indicator").style.display = "none";
-                var fadeInSound = new Audio('../assets/sound/wav/03/custom_fadein.wav');
+                var fadeInSound = new Audio('../assets/sound/wav/03/custom_fadein_2.wav');
                 for (let i = 0; i < response.data.projects.length; i++){
                     if (response.data.types[response.data.projects[i]["type"]] != null){
                         typeName = response.data.types[response.data.projects[i]["type"]]["name"];
@@ -219,14 +219,14 @@
             axios.get("../assets/json/socialmedia.json")
             .then(function(response){
                 document.querySelector("#socialmedia-view .loading-indicator").style.display = "none";
-                var fadeInSound = new Audio('../assets/sound/wav/03/custom_fadein.wav');
+                var fadeInSound = new Audio('../assets/sound/wav/03/custom_fadein_2.wav');
                 for (let i = 0; i < response.data.length; i++){
                     if (response.data[i]["link"].includes("javascript:")){
                         throw "XSS attempt";
                     }
                     finalCard = document.querySelector(`#socialmedia-container .column:nth-child(${i % 3 + 1})`).insertAdjacentHTML("beforeend", `
                         <a class="linktocard" href="${sanitizeHTML(response.data[i]["link"])}">
-                            <div class="card mb-5" style="opacity: 1; animation-delay: ${i*50}ms; animation-name: cardfadein; background-color: ${sanitizeHTML(response.data[i]["color"])}">
+                            <div class="card mb-5 has-shading" style="opacity: 1; animation-delay: ${i*50}ms; animation-name: cardfadein; background-color: ${sanitizeHTML(response.data[i]["color"])}">
                                 <div class="card-content">
                                     <div class="media">
                                         <div class="media-left">
