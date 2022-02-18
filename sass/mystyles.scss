@@ -1,6 +1,6 @@
 @charset "utf-8";
-$awesomeblue: dodgerblue;
-$awesomeblue-darker: rgb(87, 171, 255);
+$awesomeblue-darker: rgb(191, 136, 255);
+$awesomeblue: rgb(164, 94, 255);
 $primary: $awesomeblue;
 $body-background-color: black;
 $background: rgb(29, 29, 29);
@@ -28,7 +28,7 @@ $subtitle-family: 'Montserrat', sans-serif;
 $pixelbackground: url('/assets/images/background.webp');
 $pixelbackgroundblurred: url('/assets/images/background%20blurred.webp');
 
-
+$colorful-background: radial-gradient(circle, rgba(10,0,36,0) 25%, rgba(10,0,36,0.5) 100%), linear-gradient(180deg, rgba(30,144,255,0.2497199563419118) 0%, rgba(101,9,121,0.5998600123643207) 35%, rgba(10,0,36,0.9023810207676821) 100%), $pixelbackgroundblurred center;
 
 :root {
   color-scheme: dark;
@@ -166,21 +166,23 @@ hr{
         max-width: 1280px;
     }
     #main-wrapper{
-        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), $pixelbackground center;
+        background: $colorful-background;
         background-size: cover;
         background-attachment: fixed;
+        padding-top: 4em;
+        padding-bottom: 4em;
     }
     #logo-window{
         border-radius: 1em;
-        background: $pixelbackgroundblurred center;
+        background: rgba(125, 36, 145, 0.5);
         background-size: cover;
         background-attachment: fixed;
         box-shadow: 0 10px 20px 0px rgba(12, 11, 11, 0.2);
-        @supports ( -moz-appearance:none ){
+        /*@supports ( -moz-appearance:none ){
             background: $pixelbackgroundblurred left;
             background-size: 1920px;
             background-attachment: local;
-        }
+        }*/
     }
 }
 .has-shading, .is-shading{

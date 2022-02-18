@@ -24,13 +24,14 @@
                         <li class="about-tab"><a href="#about">About</a></li>
                         <li class="projects-tab"><a href="#projects">Projects</a></li>
                         <li class="socialmedia-tab"><a href="#socialmedia">Social Media</a></li>
+                        <!--<li class="coolpeople-tab"><a href="#coolpeople">Cool People</a></li>-->
                         <li class="branding-tab"><a href="#branding">Branding</a></li>
                     </ul>
                 </div>
             </div>
         </section>
     </div>
-    <section class="section fadein">
+    <section class="section fadein stuff-background">
         <div class="container is-widescreen has-text-left">
             <div style="height: 114px;"></div>
             <noscript>
@@ -52,7 +53,7 @@
                             <div class="tile is-parent is-5 is-vertical">
                                 <article class="tile is-child notification">
                                     <p class="title">Pronouns</p>
-                                    <p>I prefer they/them but you can also use he/him.</p>
+                                    <p>I use they/them prononus pretty much exclusivley! (I'm non-binary!) I would prefer if you didn't use any other pronouns but it's fine if you mess up once or twice.</p>
                                 </article>
                                 <article class="tile is-child notification">
                                     <p class="title">Country</p>
@@ -61,10 +62,13 @@
                             </div>
                             <div class="tile is-parent">
                                 <article class="tile is-child notification">
-                                    <p class="title">Stuff I use to make videos</p>
+                                    <p class="title">Stuff I use to make things:</p>
+                                    <div style="text-align: center;"><img src="/assets/images/bug%20outline.svg"></div>
                                     <p>I use Vegas Pro 17 Edit and Kdenlive to edit, a Logitech Rock Band USB Microphone, an Elgato HD60s to record console
-                                        footage, GIMP to make thumbnails and branding, Adobe Animate to make animations, and I use OBS Studio to stream and record PC footage.</p>
-                                    </article>
+                                        footage, GIMP to make thumbnails and branding, Adobe Animate to make animations, Krita to draw sketches, and I use OBS Studio to stream and record PC footage.</p>
+                                    
+                                        
+                                </article>
                             </div>
                         </div>
                         <div class="tile">
@@ -84,7 +88,7 @@
                         
                     </div>
                     <div class="tile is-parent is-hidden-mobile">
-                        <article class="tile is-child notification" style="background-image: url('../assets/images/background\ with\ logo.jpg'); background-position: center; background-size: cover;">
+                        <article class="tile is-child notification" style="background-image: url('../assets/images/bg-2.png'); background-position: center; background-size: cover;">
                         </article>
                     </div>
                 </div>
@@ -136,6 +140,11 @@
                     <div class="column">
                     </div>
                 </div>
+            </div>
+            <noscript><br><hr><br></noscript>
+            <div id="coolpeople-view">
+                <h1 class="title is-2">Cool People</h1>
+                <h1 class="subtitle is-5">Coming soon™ :)</h1>
             </div>
             <noscript><br><hr><br></noscript>
             <div id="branding-view">
@@ -260,10 +269,12 @@
             document.getElementById("projects-view").style.display = "none";
             document.getElementById("socialmedia-view").style.display = "none";
             document.getElementById("branding-view").style.display = "none";
+            document.getElementById("coolpeople-view").style.display = "none";
             document.querySelector('.about-tab').classList.remove("is-active");
             document.querySelector('.projects-tab').classList.remove("is-active");
             document.querySelector('.socialmedia-tab').classList.remove("is-active");
             document.querySelector('.branding-tab').classList.remove("is-active");
+            //document.querySelector('.coolpeople-tab').classList.remove("is-active");
         }
 
         function updatePageState(pageState){
@@ -312,6 +323,12 @@
                         document.getElementById("branding-view").style.display = "block";
                         document.querySelector('.branding-tab').classList.add("is-active");
                         document.title = "Wicycool - Branding";
+                    break;
+                    case "#coolpeople":
+                        hideViewsAndResetTabs();
+                        document.getElementById("coolpeople-view").style.display = "block";
+                        document.querySelector('.coolpeople-tab').classList.add("is-active");
+                        document.title = "Wicycool - Cool People";
                     break;
                     default:
                         hideViewsAndResetTabs();

@@ -20,6 +20,9 @@
     <section class="hero is-fullheight" style="z-index: -10;">
         <div id="main-wrapper" class="hero-body">
             <div id="main" class="container is-widescreen has-text-left">
+                    <div style="display: relative; left: 0; top: 0; overflow: visible; overflow-x: visible; max-width: 768px; height: 0px; display: block; background-color: red; text-align: right;">
+                        <img src="assets/images/bug.gif" width="100px" id="bug" style="position: relative; left: -20px; top: -65.5px;" alt="Bug - my OC! (they/them)" title="Bug - my OC! (they/them)">
+                    </div>
                 <section class="hero" style="max-width: 768px;">
                     <div id="logo-window" class="hero-body has-shading">
                         <img src="assets/images/full logo white.png" alt="Wicycool logo" style="width: 300px; min-width: 10px; vertical-align: middle;">
@@ -37,8 +40,8 @@
                         <p class="title is-3"><a href="stuff/#socialmedia" class="has-text-white link">Social Media</a></p>
                     </div>
                     <div class="block">
+                        <p class="title is-4"><a href="stuff/#coolpeople" class="has-text-white link">Cool People</a></p>
                         <p class="title is-4"><a href="stuff/#branding" class="has-text-white link">Branding</a></p>
-                        <p class="title is-4"><a href="https://discord.gg/SFtZAz3" class="has-text-white link">Discord</a></p>
                         <p class="title is-4"><a href="https://blog.wicy.cool" class="has-text-white link">Blog</a></p>
                     </div>
                     <hr>
@@ -55,6 +58,11 @@
         var backwardSelection = new Audio('assets/sound/wav/03/navigation_backward-selection.wav');
         var openSite = new Audio('assets/sound/wav/03/navigation_selection-complete-celebration.wav');
         var hoverSound = new Audio('assets/sound/wav/03/navigation_hover-tap.wav');
+        var bugSounds = [
+            new Audio('assets/sound/bug ew.wav'),
+            new Audio('assets/sound/bug ha.wav'),
+            new Audio('assets/sound/bug yeah.wav')
+        ]
         if (document.referrer.split('/')[2] != location.host) {
             //came from different non-Wicycool website
             document.querySelector("#main-wrapper").style.opacity = "1";
@@ -76,8 +84,7 @@
             "Check out Infinity Train!",
             "What is a Kevin Tendo?",
             `did u know "sans" means "without" so that means "sans the skeleton" actually means "without the skeleton" :O`,
-            "Wow, that was ez!",
-            "UwU",
+            "uwu",
             "Made with Bulma!",
             "Poyo!",
             "Minecraft-like splashes!",
@@ -89,7 +96,17 @@
             "Hi I'm Wicycool and I'm super cool.",
             "ʰᵉˡˡᵒ",
             "Check out The Owl House!",
+            "Check out Amphibia!",
             "Hosted with GitHub Pages!",
+            "i am non biney i dont have any biney",
+            "I use they/them pronouns!",
+            "Made with pure HTML and JS but unpure CSS",
+            "Check out BFDI!",
+            "Check out ONE by Cheesy Hfj!",
+            "idk why but alive anthropomorphic objects are cool",
+            "I don't know how to draw but I try!",
+            "My OC's name is Bug and they're non-binary! :D",
+            `My full legal name is Wicy "Wicycool" Cool`,
             "you should never be able to see this message"
         ] 
         document.getElementById('splash').innerText = splashoptions[Math.floor(Math.random()*(splashoptions.length - 1))]
@@ -119,6 +136,17 @@
                 }, 350);
             });
             links[i].href = "javascript:void(0);";
+        }
+        // reloads bug gif on refresh
+        var bugImg = new Image();
+        bugImg.src = "assets/images/bug-bounce.gif" 
+        bugImg.src = "assets/images/bug.gif" 
+        document.getElementById("bug").setAttribute('src', bugImg.src);
+        document.getElementById("bug").onclick = function(){
+            bugImg.src = "assets/images/bug-bounce.gif" 
+            document.getElementById("bug").setAttribute('src', bugImg.src);
+            bugSounds[Math.floor(Math.random() * 3)].play();
+            bugSounds[Math.floor(Math.random() * 3)].currentTime = 0;
         }
     </script>
 </html>
