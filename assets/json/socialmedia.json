@@ -36,7 +36,7 @@
         "socialmedia-icon": "/assets/images/social-media/discord-logo.svg",
         "username": "discord.gg/SFtZAz3",
         "description": "Talk with other people about Wicycool-related things in the Discord server!",
-        "color": "#7289DA"
+        "color": "#5865F2"
     },
     {
         "socialmedia-name": "GitHub",
@@ -63,6 +63,14 @@
         "color": "#FFB50E"
     },
     {
+        "socialmedia-name": "Reddit",
+        "link": "https://reddit.com/u/Ezlambry",
+        "socialmedia-icon": "/assets/images/social-media/reddit.webp",
+        "username": "u/Ezlambry",
+        "description": "Look at my reddit posts!",
+        "color": "#ff4500"
+    },
+    {
         "socialmedia-name": "Nintendo Switch",
         "link": "/ql/fc",
         "socialmedia-icon": "https://www.nintendo.com/content/dam/noa/en_US/images/switch/switch-logo.svg",
@@ -79,6 +87,14 @@
         "color": "green"
     },
     {
+        "socialmedia-name": "Reddit (new)",
+        "link": "https://reddit.com/u/Wicycool",
+        "socialmedia-icon": "/assets/images/social-media/reddit.webp",
+        "username": "u/Wicycool",
+        "description": "I barely use my new Reddit account...",
+        "color": "hsl(32, 75%, 50%)"
+    },
+    {
         "socialmedia-name": "Roblox",
         "link": "https://www.roblox.com/users/63683267/profile",
         "socialmedia-icon": "https://upload.wikimedia.org/wikipedia/commons/4/48/Roblox_Player_icon.png",
@@ -93,14 +109,6 @@
         "username": "@Wicycool",
         "description": "Look at my Steam profile!",
         "color": "#1B2838"
-    },
-    {
-        "socialmedia-name": "byte",
-        "link": "https://byte.co/@wicycool",
-        "socialmedia-icon": "https://byte.co/favicon.ico",
-        "username": "@Wicycool",
-        "description": "What was byte again?",
-        "color": "#5431C3"
     },
     {
         "socialmedia-name": "TikTok",
@@ -133,5 +141,37 @@
         "username": "@Wicycool@mastodon.online",
         "description": "I don't use Mastodon.",
         "color": "#3088D4"
+    },
+    {
+        "socialmedia-icon": "https://www.tumblr.com/favicon.ico",
+        "link": "https://wicycool.tumblr.com/",
+        "socialmedia-name": "Tumblr",
+        "username": "@Wicycool",
+        "description": "I don't use Tumblr.",
+        "color": "#001935"
+    },
+    {
+        "socialmedia-icon": "/assets/images/social-media/gamejolt-logo.jpg",
+        "link": "https://gamejolt.com/@Wicycool",
+        "socialmedia-name": "Game Jolt",
+        "username": "@Wicycool",
+        "description": "I don't use Game Jolt.",
+        "color": "#29262f"
+    },
+    {
+        "socialmedia-icon": "https://images.gamebanana.com/static/img/favicon/favicon.ico",
+        "link": "https://gamebanana.com/members/1979698",
+        "socialmedia-name": "GameBanana",
+        "username": "@Wicycool",
+        "description": "I don't use GameBanana.",
+        "color": "#1c272e"
+    },
+    {
+        "socialmedia-icon": "https://matrix.org/favicon-32x32.png",
+        "link": "https://matrix.to/#/@wicycool:halogen.city",
+        "socialmedia-name": "Matrix",
+        "username": "@wicycool:halogen.city",
+        "description": "I don't use Matrix.",
+        "color": "#111111"
     }
 ]

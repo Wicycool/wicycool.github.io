@@ -43,10 +43,16 @@
                         <br>
                         <p>All trademarks are the property of their respective owners.</p>
                         <br>
-                        <h1 class="title is2-">Source Code</h1>
+                        <h1 class="title is-2">Usage of assets created by Wicycool</h1>
+                        <p>Generally, I allow usage of my characters, branding, code, and other assets to be used by other people as long as they give credit to my full username and include a link/mention to either my YouTube or Twitter pages, unless the license the assets are distributed under states otherwise.</p><br>
+                        <p class="has-text-success"><span class="subtitle is-5">Example of a GOOD credit:</span><br><i>Bug created by Wicycool: https://www.twitter.com/wicycool</i></p>
+                        <p class="has-text-danger"><span class="subtitle is-5">Example of a BAD credit:</span><br><i>"character shown made by wicy"</i></p>
+                        <br><p>Please do NOT use any of my characters, branding, code, or other assets for commercial purposes, unless I have given expressive permission or the license the asset is distributed under states otherwise.</p>
+                        <br>
+                        <h1 class="title is-2">Source Code</h1>
                         <p>This website's source code can be found <a href="https://github.com/Wicycool/wicycool.github.io">on GitHub</a>, and is licensed under the <a href="https://github.com/Wicycool/wicycool.github.io/blob/main/LICENSE">GNU General Public License v3.0</a>.</p>
                         <br>
-                        <p>Website version: 1.2.1</p>
+                        <p id="version"></p>
                         <div id="last-updated" style="display: none">
                             <span></span>
                             <a></a>
@@ -64,6 +70,13 @@
             document.querySelector("#last-updated span").innerText = `Website last updated: `;
             document.querySelector("#last-updated a").innerText = new Date(response.data[0]["commit"]["author"]["date"]);
             document.querySelector("#last-updated a").href = response.data[0]["html_url"];
+        }).catch(function(error){
+            console.log(error);
+        });
+        
+        axios.get("/package.json")
+        .then(function(response){
+            document.querySelector("#version").innerText = "Website version: " + response.data.version;
         }).catch(function(error){
             console.log(error);
         });
