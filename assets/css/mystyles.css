@@ -301,7 +301,7 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif !important; }
+  font-family: "Heebo", sans-serif; }
 
 code,
 pre {
@@ -2091,7 +2091,7 @@ a.tag:hover {
 
 .title {
   color: white;
-  font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif !important;
+  font-family: "Montserrat", sans-serif;
   font-size: 2rem;
   font-weight: 600;
   line-height: 1.125; }
@@ -7018,13 +7018,13 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   font-weight: 700 !important; }
 
 .is-family-primary {
-  font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif !important; }
+  font-family: "Heebo", sans-serif !important; }
 
 .is-family-secondary {
-  font-font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif !important; }
+  font-family: "Montserrat", sans-serif !important; }
 
 .is-family-sans-serif {
-  font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif !important; }
+  font-family: "Heebo", sans-serif !important; }
 
 .is-family-monospace {
   font-family: monospace !important; }
@@ -7854,7 +7854,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   color-scheme: dark; }
 
 .tabs {
-  font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif !important; }
+  font-family: "Montserrat", sans-serif; }
 
 @keyframes fadein {
   to {
